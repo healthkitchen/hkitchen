@@ -5,6 +5,8 @@ function loadRecipe(){
     var ingredients_list = document.getElementById("ingredients-list");
     var directions_list = document.getElementById("directions-list");
 
+
+    document.getElementById("current_image").src = recipe.imgsrc;
     document.getElementById("recipe-name").innerHTML=recipe.name;
 
     for(var i of recipe.ingredients){
