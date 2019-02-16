@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Health's Kitchen Index</title>
+<title>Recipe</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -8,12 +8,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="recipe.css">
 
-<body>
+<body onload=loadRecipe()>
 
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><b>Health's Kitchen</b></a>
+    <a class="navbar-brand" href="index.html">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -33,56 +34,32 @@
       </ul>
     </div>
   </nav>
-
-  <!--Greeting-->
-  <div class="greeting">
-    <h1>
-      Hello, Gordon
-    </h1>
-  <form class="form-group">
-    <input class="search-cards form-control col-xs-4" type="search" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-  </div>
-  <!-- Page content -->
+  <!--Content contains name,ingredients, and directions to be loaded in-->
   <div class="content">
+    <div class="recipe-img">
+      <img src="images/science.png" alt="great image">
 
-    <template id="cardtemplate">
-      <div class ="col-md-4">
-        <div class="card">
-          <a href="recipe.html">
-            <img src="" alt="great image">
-          </a>
-          <div class="description"></div>
-        </div>
-      </div>
-    </template>
-    <div class="cards container-fluid">
-      <div class="row">
-
-      </div>
     </div>
 
-    <hr>
+    <h1 id="recipe-name"></h1>
+    <div class="row">
+      <div class="ingredients col-4">
+        <h2>Ingredients</h2>
+        <ul id="ingredients-list">
+        </ul>
+      </div>
 
-
-
-    <!-- Contact Section -->
-    <div id="contact">
-      <h4>EECS 330 Project Members</h4>
-      <p>Jason Liu, Harrison Pearl, Kevin Lee, Kobe Mandell</p>
+      <div class="recipe col-6">
+        <h2>Directions</h2>
+        <ol id="directions-list" align="justify">
+        </ol>
+      </div>
     </div>
-
-    <!-- End page content -->
   </div>
+  <!--Script files-->
+  <script src="recipe_list.js"></script>
+  <script src="recipe.js"></script>
 
-  <!-- Footer -->
-  <footer>
-    <h6>Powered by memes</h6>
-  </footer>
-
-  <!--Scripts-->
-  <script src=mainscript.js></script>
 
 </body>
 
