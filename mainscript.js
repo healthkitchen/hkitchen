@@ -1,4 +1,4 @@
-
+var recipes = [];
 
 function init(){
     console.log("Initializing index page");

@@ -7,58 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-<style>
-  body {
-    font-family: "Arial", Georgia, Serif;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 10px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Playfair Display";
-  }
-
-  .content{
-    margin:15px;
-  }
-
-  .navbar-brand {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 24px
-  }
-
-  .navbar {
-    font-family: "Arial";
-    font-size: 14pt;
-  }
-
-  .greeting {
-    margin: 20px;
-    letter-spacing: 3px;
-  }
-
-  .col-md-4{
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .content img{
-    width:250px;
-  }
-
-  .description{
-    text-align:center;
-  }
-</style>
+<link rel="stylesheet" href="main.css">
 
 <body>
 
@@ -82,10 +31,6 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
 
@@ -93,14 +38,20 @@
     <h1>
       Hello, Gordon
     </h1>
+  <form class="form-group">
+    <input class="search-cards form-control col-xs-4" type="search" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
   </div>
   <!-- Page content -->
   <div class="content">
 
     <template id="cardtemplate">
       <div class ="col-md-4">
-        <img src="" alt="great image">
-        <div class="description"></div>
+        <div class="card">
+          <img src="" alt="great image">
+          <div class="description"></div>
+        </div>
       </div>
     </template>
     <div class="cards container-fluid">
@@ -124,7 +75,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>Powered by memes</p>
+    <h6>Powered by memes</h6>
   </footer>
 
   <!--Scripts-->
