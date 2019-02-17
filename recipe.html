@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="recipe.css">
 
+<!--onload, load in the recipe-->
 <body onload=loadRecipe()>
 
   <!-- Navbar (sit on top) -->
@@ -26,7 +27,7 @@
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="">Your Shopping List</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
@@ -40,6 +41,8 @@
       <img id="current_image" src="images/science.png" alt="great image">
 
     </div>
+
+    <p id="prices"></p>
 
     <h1 id="recipe-name"></h1>
     <div class="row">
