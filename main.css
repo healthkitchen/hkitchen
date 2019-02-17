@@ -1,0 +1,86 @@
+body {
+    background-color:#CBF3F0;
+    font-family: "Arial", Georgia, Serif;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display";
+  }
+
+  .content{
+    margin:30px;
+  }
+
+
+  .navbar-light .navbar-brand {
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+  }
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+  .bg-light{
+    background-color:#139E8C !important;
+  }
+  .navbar-custom {
+    font-family: "Arial";
+    font-size: 14pt;
+  }
+
+  .nav-link{
+      color:white;
+  }
+
+  .greeting {
+    margin: 20px;
+    letter-spacing: 3px;
+  }
+
+  .col-md-4{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .card{
+    margin-left:30px;
+    margin-right:30px;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+
+
+  .content img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:100%;
+    max-height:100%;
+  }
+
+  .description{
+    background-color:#2EC4B6;
+    text-align:center;
+  }
+
+  .search-cards{
+    width:40%;
+    display:inline-block;
+  }

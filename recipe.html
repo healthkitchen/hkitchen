@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>Recipe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="recipe.css">
+
+<!--onload, load in the recipe-->
+<body onload=loadRecipe()>
+
+  <!-- Navbar (sit on top) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Your Shopping List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Content contains name,ingredients, and directions to be loaded in-->
+  <div class="content">
+    <div class="recipe-img">
+      <img id="current_image" src="images/science.png" alt="great image">
+
+    </div>
+
+    <p id="prices"></p>
+
+    <h1 id="recipe-name"></h1>
+    <div class="row">
+      <div class="ingredients col-4">
+        <h2>Ingredients</h2>
+        <ul id="ingredients-list">
+        </ul>
+      </div>
+
+      <div class="recipe col-6">
+        <h2>Directions</h2>
+        <ol id="directions-list" align="justify">
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!--Script files-->
+  <script src="recipe_list.js"></script>
+  <script src="recipe.js"></script>
+
+
+</body>
+
+</html>
