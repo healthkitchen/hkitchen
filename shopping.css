@@ -1,0 +1,20 @@
+
+/*unordered list styling*/
+ul
+{
+  list-style-type: none;
+}
+/*Recipie Card container for shopping page, used in card template*/
+.col-md-5{
+  margin-top:40px;
+  margin-bottom:40px;
+
+}
+
+/*Recipie Card for shopping page, used in card template*/
+.card2{
+  position: relative;
+
+  width: 250px;
+
+}
