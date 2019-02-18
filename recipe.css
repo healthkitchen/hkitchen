@@ -3,3 +3,13 @@
     margin:15px;
     width:300px;
 }
+
+.my-rec-button{
+  position: relative;
+  bottom: 50px;
+  left: 50px;
+  width: 120px;
+  height: 60px;
+
+
+}

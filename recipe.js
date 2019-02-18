@@ -30,3 +30,12 @@ function parseURI(){
     var loc = uri.indexOf('#') + 1;
     return parseInt(uri.substring(loc));
 }
+
+function addRec()
+{
+  var retrievedmyrecipes = localStorage.getItem("MR")
+  var myrecipes = JSON.parse(retrievedmyrecipes);
+  var index = parseURI();
+  myrecipes.push(index);
+  localStorage.setItem("MR", JSON.stringify(myrecipes));
+}

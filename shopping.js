@@ -1,11 +1,15 @@
+
+
+
 function loadShoppingList()
 {
 
   console.log("Initializing Shopping List page");
+  var retrievedmyrecipes = localStorage.getItem("MR")
+  var myrecipes = JSON.parse(retrievedmyrecipes);
 
-  var myrecipies = [recipes[0], recipes[0], recipes[0], recipes[0]];
 
-  for(var i = 0; i < myrecipies.length; i++)
+  for(var i = 0; i < myrecipes.length; i++)
   {
     var node = document.createElement("LI");
 
@@ -22,3 +26,12 @@ function loadShoppingList()
 
 
 };
+
+function addRec()
+{
+  var retrievedmyrecipes = localStorage.getItem("MR")
+  var myrecipes = JSON.parse(retrievedmyrecipes);
+  var index = parseURI();
+  myrecipes.push(index);
+  localStorage.setItem("MR", JSON.stringify(myrecipes));
+}
