@@ -65,7 +65,7 @@ var recipes = [
             ["3 cups hearty bread, cut into 3/4-inch cubes", "Bread"],
             ["2 ounces finely grated Parmesan cheese (about 1 cup), divided", "Parmesan Cheese"],
             ["Kosher salt and freshly ground black pepper", "Salt"],
-            ["1 egg yolk", "Eggs"],
+            ["1 egg yolk", "Egg"],
             ["1 tablespoon (15ml) juice from 1 lemon", "Lemon"],
             ["2 to 6 anchovies", "Anchovies"],
             ["1 teaspoon (5ml) Worcestershire sauce", "Worcestershire Sauce"],
@@ -294,5 +294,7 @@ var ingredients = {
     "scallions":1.89,
     "soy sauce":2.29,
     "sesame oil":7.49,
+    "chicken stock":8.00,
+    "canola oil": 5.97,
 
 };

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="shopping.css">
 
 <!--onload call initialization-->
+
 <body onload=loadShoppingList()>
 
   <!-- Navbar (sit on top) -->
@@ -37,7 +38,7 @@
   <div class="content">
 
     <template id="cardtemplate">
-      <div class ="col-md-5">
+      <div class="col-md-5">
         <div class="card2">
           <a href="recipe.html">
             <img src="" alt="great image">
@@ -52,23 +53,39 @@
 
       <div class="ingredients col-6">
         <h2>Your Recipes</h2>
-      <!--  <button class="my-rec-button" onclick="clear">Add to My Recipies</button> -->
+        <h5>Click on image to add ingredients to shopping list!</h5>
+        <!--  <button class="my-rec-button" onclick="clear">Add to My Recipies</button> -->
         <ul id="ingredients-list">
 
         </ul>
 
-        </div>
-      <div class="recipe col-6">
+      </div>
+      <div class="recipe col-3">
         <h2>Your Shopping List</h2>
+        <p id="total">Total:</p>
+        <button class="clear_list btn btn-danger" onclick=clearShoppingList()>clear list</button>
         <ol id="shopping-list" align="justify">
         </ol>
       </div>
 
-  </div>
-  <!--Script files-->
-<script src="recipe_list.js"></script>
-<script src="recipe.js"></script>
-<script src="shopping.js"></script>
+    </div>
+    <!--Script files-->
+    <script src="recipe_list.js"></script>
+    <script src="recipe.js"></script>
+    <script src="shopping.js"></script>
+
+    <!--templates go here-->
+    <template id="shopping_cardtemplate">
+      <div class="col-md-10">
+        <div class="card">
+          <a href="">
+            <img src="" alt="great image">
+          </a>
+          <div class="description"></div>
+          <button class="list_remove btn btn-danger" onclick="">remove from list</button>
+        </div>
+      </div>
+    </template>
 
 </body>
 
