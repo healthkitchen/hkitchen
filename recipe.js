@@ -32,8 +32,18 @@ function parseURI(){
     return parseInt(uri.substring(loc));
 }
 
+
 $(document).ready(function(){
     $('button').click(function(){
         $('.alert').show()
     }) 
   });
+
+function addRec()
+{
+  var retrievedmyrecipes = localStorage.getItem("MR")
+  var myrecipes = JSON.parse(retrievedmyrecipes);
+  var index = parseURI();
+  myrecipes.push(index);
+  localStorage.setItem("MR", JSON.stringify(myrecipes));
+}

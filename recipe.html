@@ -15,7 +15,9 @@
 
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Health's Kitchen</a>
+
+    <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,9 +25,6 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="shopping.html">Your Shopping List</a>
         </li>
@@ -44,6 +43,11 @@
       <img id="current_image" src="images/science.png" alt="great image">
 
     </div>
+
+
+    <button class="my-rec-button" onclick="addRec()">Add to My Recipies</button>
+
+    <p id="prices"></p>
 
     <h1 id="recipe-name"></h1>
     <h4 id="prices"></h4>
@@ -65,6 +69,7 @@
   <!--Script files-->
   <script src="recipe_list.js"></script>
   <script src="recipe.js"></script>
+  <script src="shopping.js"></script>
 
 
 </body>
