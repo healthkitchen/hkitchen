@@ -3,6 +3,7 @@ function loadRecipe(){
     //get the recipe you need
     console.log(window.location.href);
     var index = parseURI();
+    //index = recipes.length -1;
     var recipe = recipes[index];
     var ingredients_list = document.getElementById("ingredients-list");
     var directions_list = document.getElementById("directions-list");
@@ -30,3 +31,9 @@ function parseURI(){
     var loc = uri.indexOf('#') + 1;
     return parseInt(uri.substring(loc));
 }
+
+$(document).ready(function(){
+    $('button').click(function(){
+        $('.alert').show()
+    }) 
+  });
