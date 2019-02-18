@@ -3,11 +3,12 @@
 function init(){
     console.log("Initializing index page");
 
-    for(var i = 0; i < 12; i++){
+    for(var i = 0; i < recipes.length; i++){
     var t = document.querySelector("#cardtemplate");
-    t.content.querySelector('img').src = "images/science.png";
-    t.content.querySelector('.description').innerHTML = "delicious";
-    t.content.querySelector('a').href = "recipe.html#0"
+    var r = recipes[i]
+    t.content.querySelector('img').src = r.imgsrc;
+    t.content.querySelector('.description').innerHTML = r.name + " $" +r.homeprice;
+    t.content.querySelector('a').href = "recipe.html#" + i;
 
     var clone = document.importNode(t.content,true);
     document.querySelector(".cards > .row").appendChild(clone);

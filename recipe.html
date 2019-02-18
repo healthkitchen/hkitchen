@@ -15,7 +15,9 @@
 
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
     <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -33,17 +35,23 @@
     </div>
   </nav>
   <!--Content contains name,ingredients, and directions to be loaded in-->
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      Add to shopping list successful!
+  </div>
   <div class="content">
     <div class="recipe-img">
       <img id="current_image" src="images/science.png" alt="great image">
 
     </div>
 
+
     <button class="my-rec-button" onclick="addRec()">Add to My Recipies</button>
 
     <p id="prices"></p>
 
     <h1 id="recipe-name"></h1>
+    <h4 id="prices"></h4>
+    <button class="shopping_add btn btn-success">Add to Shopping List</button>
     <div class="row">
       <div class="ingredients col-4">
         <h2>Ingredients</h2>

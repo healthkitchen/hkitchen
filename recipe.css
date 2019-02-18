@@ -4,6 +4,10 @@
     width:300px;
 }
 
+.alert{
+    display:none;
+}
+
 .my-rec-button{
   position: relative;
   bottom: 50px;
