@@ -212,7 +212,7 @@ var recipes = [
             ["1 teaspoon (5ml) toasted sesame oil", "Sesame Oil"],
             ["Kosher salt and ground white pepper", "Salt"],
             ["1 large egg", "Egg"],
-            ["4 ounces (115g) frozen peas", "frozen peas"],
+            ["4 ounces (115g) frozen peas", "Frozen Peas"],
         ],
         directions: [
             "If using day-old rice (see note), transfer to a medium bowl and break the rice up with your hands into individual grains before proceeding. Heat 1/2 tablespoon (7ml) vegetable oil in a wok over high heat until smoking. Add half of rice and cook, stirring and tossing, until the rice is pale brown and toasted and has a lightly chewy texture, about 3 minutes. Transfer to a medium bowl. Repeat with another 1/2 tablespoon oil and remaining rice.",
