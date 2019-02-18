@@ -10,7 +10,17 @@
 <link rel="stylesheet" href="main.css">
 
 <!--on load, call init from mainscript.js-->
-<body onload=init()>
+<body onload=init_index()>
+    <template id="cardtemplate">
+        <div class ="col-md-4">
+          <div class="card">
+            <a href="recipe.html">
+              <img src="" alt="great image">
+            </a>
+            <div class="description"></div>
+          </div>
+        </div>
+      </template>
 
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,23 +48,15 @@
       Here's to your Health
     </h1>
   <form class="form-group">
-    <input class="search-cards form-control col-xs-4" type="search" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+    <input class="search-cards form-control col-xs-4" type="search" placeholder="Name">
+    <input class="search-price form-control col-xs-4" type="search" placeholder="Price">
+    <button class="btn btn-success" type="button" onclick="search()">Search</button>
   </form>
   </div>
   <!-- Page content -->
   <div class="content">
 
-    <template id="cardtemplate">
-      <div class ="col-md-4">
-        <div class="card">
-          <a href="recipe.html">
-            <img src="" alt="great image">
-          </a>
-          <div class="description"></div>
-        </div>
-      </div>
-    </template>
+
     <div class="cards container-fluid">
       <div class="row">
 
@@ -66,6 +68,8 @@
 
 
     <!-- Contact Section -->
+
+
     <div id="contact">
       <h4>EECS 330 Project Members</h4>
       <p>Jason Liu, Harrison Pearl, Kevin Lee, Kobe Mandell</p>
