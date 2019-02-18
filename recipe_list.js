@@ -22,6 +22,35 @@ var recipes = [
         ],
         time:"12 min",
         yield:"serves 4 to 6"
+    },
+
+    {
+        retailprice:10.00,
+        homeprice:8.00,
+        name:"Mark Bittman's Chicken Cutlets with Quick Pan Sauce",
+        imgsrc:"images/ChickenCutletswithPanSauce",
+        ingredients:[
+            ["1 cup all-purpose flour", "Flour"],
+            ["1 1/2 pounds boneless, skinless chicken breasts, thighs, or tenders", "Chicken"],
+            ["Salt", "Salt"],
+            ["Freshly ground lack pepper", "Black Pepper"],
+            ["2 tablespoons olive oil", "Olive Oil"],
+            ["3 tablespoons butter", "Butter"],
+            ["1/2 cup dry white wine", "White Wine"],
+            ["1/2 cup water, chicken stock, or vegetable stock", "Chicken Stock"],
+            ["1/4 cup chopped fresh parlsey leaves, plus 2 tablesppoons for garnish", "Parsley"],
+            ["1 lemon, quartered", "Lemon"],
+        ],
+        directions:[
+            "Heat the oven to 200°F. Put the flour on a plate or in a shallow bowl next to the stove. If necessary, put each cutlet between 2 sheets of sheet of plastic wrap and pound to uniform thickness; blot the chicken dry with a paper towel and sprinkle with salt and pepper.",
+            "Put the oil and 2 tablespoons of the butter in a large skillet over medium-high heat. When the butter has melted, turn a piece of the chicken in the flour to coat it on all sides; shake off any excess. Add the floured chicken to the pan, then repeat with the next piece; work in batches if necessary to avoid crowding the pan.",
+            "Cook, adjusting the heat as needed so that the fat is always bubbling but the chicken doesn’t burn. After 2 minutes, rotate the chicken so that the outside edges are moved toward the center and vice versa (don’t flip them; you want the same side in contact with the fat). When the bottom of each piece is brown, after 3 to 4 minutes, turn them over.",
+            "Cook on the second side, adjusting the heat as described in Step 3, until the chicken is firm to the touch but still a bit pink inside, another 3 to 4 minutes. To check for doneness, cut into a piece with a thin-bladed knife and take a peek. Transfer the chicken to an ovenproof platter and put it in the oven.",
+            "Add the wine to the skillet, keeping the heat at medium-high. Let it bubble away as you stir and scrape the bottom of the pan, until about half the wine has evaporated, a minute or two. Pour in the water and continue to stir until the liquid has thickened slightly and reduced to 1/4 cup, another 2 or 3 minutes. Add the remaining tablespoon of butter to the skillet and swirl the pan around until the butter melts; turn off the heat.",
+            "Remove the chicken from the oven, and if any juices have accumulated on the platter, add them to the skillet along with the  1/4 cup parsley. Stir, taste the sauce, and adjust the seasoning. Spoon the sauce over the chicken, garnish with the remaining 2 tablespoons parsley, and serve with the lemon quarters."
+        ],
+        time:"20-30 minutes",
+        yield:"4 servings"
     }
 ];
 
@@ -35,5 +64,10 @@ var ingredients = {
     "parmesan cheese":4.29,
     "black pepper":2.99,
     "basil":4.49,
-
+    "flour":3.49,
+    "chicken":4.49,
+    "butter":3.69,
+    "chicken broth":2.99,
+    "lemon":1.49,
+    "parsley":2.49
 };
