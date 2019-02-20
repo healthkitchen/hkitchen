@@ -11,7 +11,7 @@ function loadRecipe(){
     document.getElementById("current_image").src = recipe.imgsrc;
     document.getElementById("recipe-name").innerHTML=recipe.name;
     document.getElementById("prices").innerHTML="Home Price: $" + recipe.homeprice
-     + " Retail: $" + recipe.retailprice;
+     + " Retail: $" + recipe.retailprice + " " + recipe.time;
 
     for(var i of recipe.ingredients){
         //console.log(i);
