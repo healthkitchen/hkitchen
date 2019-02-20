@@ -2,7 +2,9 @@
     display:inline-block;
     margin:15px;
     width:300px;
+    border-radius: 5px;
 }
+
 
 .alert{
     display:none;
@@ -21,3 +23,82 @@
 .rm{
     float:right;
 }
+
+.ingredients
+{
+  position: relative;
+  top: 15px;
+  left: 16px;
+  border-style: solid;
+  border-color: #EFF0F1;
+  margin-bottom: auto;
+
+  box-shadow:         1px 1px 0px 0px #ccc;
+  border-radius: 5px;
+
+  font-weight: bold;
+
+}
+
+.recipe
+{
+  position: relative;
+  top: 15px;
+  left: 40px;
+  border-style: solid;
+  border-color: #EFF0F1;
+  margin-bottom: auto;
+
+
+  box-shadow:         1px 1px 0px 0px #ccc;
+  border-radius: 5px;
+
+
+
+
+}
+
+.shopping_add
+{
+  position: relative;
+  right: 320px;
+
+  border-color: #EFF0F1;
+  border-radius: 5px;
+  margin-top: 50px;
+
+  font-weight: bold;
+
+
+}
+
+#prices
+{
+  position: relative;
+  top: 10px;
+  left: 16px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 150%;
+  color: #139E8C;
+}
+
+#recipe-name
+{
+  position: relative;
+  left: 16px;
+  font-weight: bold;
+}
+
+#ingredients-list
+{
+
+    margin-bottom: 30px;
+
+}
+/*
+li:not(:last-child) 
+{
+    margin-bottom: 30px;
+}
+*/
