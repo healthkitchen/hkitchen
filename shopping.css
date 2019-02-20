@@ -18,3 +18,17 @@ ul
   width: 250px;
 
 }
+
+.list_remove{
+
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+
+#shopping-list
+{
+	padding-top: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: bold;
+}
