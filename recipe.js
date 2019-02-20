@@ -26,6 +26,7 @@ function loadRecipe(){
     }
 }
 
+//get current recipe index from URI
 function parseURI(){
     var uri = decodeURI(window.location.href);
     var loc = uri.indexOf('#') + 1;
@@ -33,17 +34,20 @@ function parseURI(){
 }
 
 
+
+
+function addRec()
+{
+  var retrievedmyrecipes = localStorage.getItem("MR");
+  var myrecipes = JSON.parse(retrievedmyrecipes || '[]'); //if recipes doesnt exist, use empty array
+  var index = parseURI();
+  if(!myrecipes.includes(index)){
+      myrecipes.push(index);}
+  localStorage.setItem("MR", JSON.stringify(myrecipes));
+}
+
 $(document).ready(function(){
     $('button').click(function(){
         $('.alert').show()
     }) 
-  });
-
-function addRec()
-{
-  var retrievedmyrecipes = localStorage.getItem("MR")
-  var myrecipes = JSON.parse(retrievedmyrecipes);
-  var index = parseURI();
-  myrecipes.push(index);
-  localStorage.setItem("MR", JSON.stringify(myrecipes));
-}
+});
