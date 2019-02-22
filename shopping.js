@@ -29,7 +29,7 @@ function loadShoppingList() {
         var t = document.querySelector("#shopping_cardtemplate");
         t.content.querySelector('img').src = dat.imgsrc;
         t.content.querySelector('.description').innerHTML = dat.name;
-        t.content.querySelector('a').href = "javascript:addToShoppingList(" + i + ")";
+        t.content.querySelector('a').href = "javascript:addToShoppingList(" + recipe_idx + ")";
 
         var clone = document.importNode(t.content, true);
 
