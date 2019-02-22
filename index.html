@@ -10,17 +10,18 @@
 <link rel="stylesheet" href="main.css">
 
 <!--on load, call init from mainscript.js-->
+
 <body onload=init_index()>
-    <template id="cardtemplate">
-        <div class ="col-md-4">
-          <div class="card">
-            <a href="recipe.html">
-              <img src="" alt="great image">
-            </a>
-            <div class="description"></div>
-          </div>
-        </div>
-      </template>
+  <template id="cardtemplate">
+    <div class="col-md-4">
+      <div class="card">
+        <a href="recipe.html">
+          <img src="" alt="great image">
+        </a>
+        <div class="description"></div>
+      </div>
+    </div>
+  </template>
 
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,13 +48,14 @@
     <h1>
       Here's to your Health
     </h1>
-  <form class="form-group">
-    <input class="search-cards form-control col-xs-4" type="search" placeholder="Name">
-    <input class="search-price form-control col-xs-4" type="search" placeholder="Price">
-    <input class="search-time form-control col-xs-4" type="search" placeholder="Time">
-    <button class="btn btn-success" type="button" onclick="search()">Search</button>
-  </form>
+    <form class="form-group">
+      <input class="search-cards form-control col-xs-4" type="search" placeholder="Name">
+      <input class="search-price form-control col-xs-4" type="search" placeholder="Price">
+      <input class="search-time form-control col-xs-4" type="search" placeholder="Time">
+      <button class="btn btn-success" type="button" onclick="search()">Search</button>
+    </form>
   </div>
+
   <!-- Page content -->
   <div class="content">
 
