@@ -82,10 +82,19 @@ body {
     /*background-color: #CBF3F0;*/
     border-color: #EFF0F1;
     border-radius: 5px;
-
+    transition: all .4s;
   }
 
+  .card:hover{
+    transform: scale(1.03);
+    box-shadow: 3px 3px 20px -3px #bbb;
+    transition: all .1s;
+  }
 
+  .card:active{
+    transform: scale(1.02);
+    box-shadow: 3px 3px 0px -3px #bbb;
+  }
 
 
 
