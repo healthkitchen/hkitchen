@@ -1,8 +1,12 @@
-
 /*unordered list styling*/
 ul
 {
   list-style-type: none;
+}
+
+.ingredients{
+	height:80vh;
+	overflow-y:scroll;
 }
 /*Recipie Card container for shopping page, used in card template*/
 .col-md-5{
