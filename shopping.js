@@ -56,51 +56,20 @@ function loadShoppingList() {
         node.textContent = category;
         document.getElementById("shopping-list").append(node);
         for(let item in myshoppinglist[category]){
-            var node = document.createElement("tr");
-            node.setAttribute("class","row")
-            var info = document.createElement("td");
-            info.setAttribute("class","col-md-3 align-bottom");
-            info.textContent = item;
-            node.append(info);
-            var info = document.createElement("td");
-            info.setAttribute("class","col-md-3");
-            info.textContent = myshoppinglist[category][item][1]; //typical size
-            node.append(info);
-            var info = document.createElement("td");
-            info.setAttribute("class","col-md-2");
-            info.textContent = "$" + myshoppinglist[category][item][0]; //price
-            node.append(info);
-            var info = document.createElement("td");
-            info.setAttribute("class","col-md-2");
-            info.textContent = myshoppinglist[category][item][2]; //quantity
-            node.append(info);
 
-            //up and down arrows
-            var info = document.createElement("td");
-            //info.setAttribute("class","row");
-            var t = document.querySelector("#quant_link");
-            t.content.querySelector("a").href="javascript:upQuant(\""+category + "\",\"" + item +"\")";
-            t.content.querySelector("i").innerHTML = "keyboard_arrow_up";
-            t.content.querySelector("i").value="up";
-            info.appendChild(document.importNode(t.content,true));
+            var t = document.querySelector("#list_item_template");
+            t.content.querySelector(".item").textContent = item;
+            t.content.querySelector(".size").textContent = myshoppinglist[category][item][1];
+            t.content.querySelector(".price").textContent = myshoppinglist[category][item][0];
+            t.content.querySelector(".quant").textContent = myshoppinglist[category][item][2];
+            t.content.querySelector(".quant_up").href = "javascript:upQuant(\""+category + "\",\"" + item +"\")";;
+            t.content.querySelector(".quant_down").href = "javascript:downQuant(\""+category + "\",\"" + item +"\")";
+            t.content.querySelector(".dlt").href = "javascript:removeFromShoppingList(\""+category + "\",\"" + item +"\")";
 
-            var t = document.querySelector("#quant_link");
-            t.content.querySelector("a").href="javascript:downQuant(\""+category + "\",\"" + item +"\")";
-            t.content.querySelector("i").innerHTML = "keyboard_arrow_down";
-            t.content.querySelector("i").value="down";
-            info.appendChild(document.importNode(t.content,true));
-            node.append(info);
+            var cln = document.importNode(t.content,true);
+            document.getElementById("shopping-list").append(cln);
 
-            var info = document.createElement("a");
-            info.setAttribute("class","col-md-2");
-            info.href = "javascript:removeFromShoppingList(\""+category + "\",\"" + item +"\")";
-            info.textContent = "x"; //quantity
-            node.append(info);
-
-            
             total += myshoppinglist[category][item][0] * myshoppinglist[category][item][2];
-            
-            document.getElementById("shopping-list").append(node);
         }
 
     }
