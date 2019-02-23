@@ -18,14 +18,7 @@ ul
   width: 250px;
 
 }
-
-.col-md-3{
-	font-style:normal;
-}
-
-.quant{
-	height:20px;
-}
+/*shopping list styling*/
 i.material-icons{
 	font-size:20px;
 }
@@ -39,7 +32,7 @@ td{
 .quant_link{
 	margin-top:0px;
 }
-
+/*List add styling*/
 .list_add{
 	display:inline-block;
 	margin-right: auto;
