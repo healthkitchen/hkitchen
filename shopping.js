@@ -11,12 +11,12 @@ function loadShoppingList() {
 
     //first clear out old recipe list and re-render
     var node = document.getElementById("ingredients-list");
-    while (node && node.firstChild) {
+    while (node.firstChild) {
         node.removeChild(node.firstChild);
     }
     //clear out old shopping list and re-render
     var node = document.getElementById("shopping-list");
-    while (node && node.firstChild) {
+    while (node.firstChild) {
         node.removeChild(node.firstChild);
     }
 
@@ -30,7 +30,6 @@ function loadShoppingList() {
         for (let i = 0; i < myrecipes.length; i++) {
             let recipe_idx = myrecipes[i];
             var dat = recipes[recipe_idx];
-            var node = document.createElement("li");
 
             var t = document.querySelector("#shopping_cardtemplate");
             t.content.querySelector('img').src = dat.imgsrc;
@@ -41,9 +40,7 @@ function loadShoppingList() {
             clone.querySelector(".list_add").onclick = function(){addToShoppingList(recipe_idx)};
             clone.querySelector(".list_remove").onclick = function () { removeFromMyRecipes(i) };
 
-            node.appendChild(clone);
-
-            document.getElementById("ingredients-list").appendChild(node);
+            document.getElementById("ingredients-list").appendChild(clone);
         }
     }
 
