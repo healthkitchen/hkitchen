@@ -4,6 +4,10 @@ ul
   list-style-type: none;
 }
 
+li{
+	font-size:12pt;
+}
+
 .ingredients{
 	height:80vh;
 	overflow-y:scroll;

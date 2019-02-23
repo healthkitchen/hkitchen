@@ -3,11 +3,6 @@ var undo_buffer = {};
 function loadShoppingList() {
 
     console.log("Initializing Shopping List page");
-    var retrievedmyrecipes = localStorage.getItem("MR") || '{}'
-    var myrecipes = JSON.parse(retrievedmyrecipes);
-
-    var retrieved_shoppinglist = localStorage.getItem("SL") || '{}';
-    var myshoppinglist = JSON.parse(retrieved_shoppinglist);
 
     //first clear out old recipe list and re-render
     var node = document.getElementById("ingredients-list");
@@ -19,6 +14,19 @@ function loadShoppingList() {
     while (node.firstChild) {
         node.removeChild(node.firstChild);
     }
+    
+    renderMyRecipes();
+    renderShopping();
+
+
+
+
+};
+
+function renderMyRecipes(){
+    console.log("Rendering My Recipes");
+    var retrievedmyrecipes = localStorage.getItem("MR") || '{}'
+    var myrecipes = JSON.parse(retrievedmyrecipes);
 
     //iterate and render my recipes
     if (myrecipes.length == 0) {
@@ -43,12 +51,35 @@ function loadShoppingList() {
             document.getElementById("ingredients-list").appendChild(clone);
         }
     }
+}
 
+function renderShopping(){
     //iterate and render shopping list
+    console.log("Rendering Shopping List");
+    var retrieved_shoppinglist = localStorage.getItem("SL") || '{}';
+    var myshoppinglist = JSON.parse(retrieved_shoppinglist);
+
     var total = 0;
     for (let category in myshoppinglist) {
         //console.log(category);
         //console.log(myshoppinglist[category]);
+        if(category == "recipes"){
+            //console.log("loading recipes in shopping list");
+            var node = document.createElement("h5");
+            node.textContent = "Recipes";
+            var lst = document.createElement("ol");
+            document.getElementById("shopping-list").append(node);
+            var lst_item;
+            for(let r of myshoppinglist["recipes"]){
+                //console.log(r);
+                lst_item = document.createElement("li");
+                lst_item.innerHTML = r;
+                lst.appendChild(lst_item);
+            }
+            node.appendChild(lst);
+            document.getElementById("shopping-list").append(node);
+            continue;
+        }
         var node = document.createElement("h5");
         node.textContent = category;
         document.getElementById("shopping-list").append(node);
@@ -71,9 +102,7 @@ function loadShoppingList() {
 
     }
     document.getElementById("total").innerHTML = "Total: $" + Math.round(total * 100) / 100;
-
-
-};
+}
 //mutators for shopping list
 function addToShoppingList(idx) {
     console.log("adding to shopping list " + idx);
@@ -82,7 +111,14 @@ function addToShoppingList(idx) {
     var temp = JSON.parse(JSON.stringify(SL));
 
     //adds unique recipes to shopping list
+
     let recipe = recipes[idx];
+    if(!("recipes" in SL)){
+        SL["recipes"] = [];
+    }
+    if(SL["recipes"].indexOf(recipe.name) == -1){
+        SL["recipes"].push(recipe.name);
+    }
     for (let d of recipe.ingredients) {
         var name = d[1];
         var ingredient_info = ingredients[name];
