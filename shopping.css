@@ -11,7 +11,7 @@ ul
 
 }
 
-/*Recipie Card for shopping page, used in card template*/
+/*Recipe Card for shopping page, used in card template*/
 .card2{
   position: relative;
 
@@ -19,8 +19,27 @@ ul
 
 }
 
-.list_remove{
+.col-md-3{
+	font-style:normal;
+}
 
+.quant{
+	height:20px;
+}
+i.material-icons{
+	font-size:20px;
+}
+
+
+.list_add{
+	display:inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+
+.list_remove{
+	display:inline-block;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 10px;

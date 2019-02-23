@@ -7,6 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="recipe.css">
 <link rel="stylesheet" href="shopping.css">
@@ -26,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Your Shopping List</a>
+          <a class="nav-link" href="#">Your Recipes and Shopping List</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
@@ -53,19 +54,18 @@
 
       <div class="ingredients col-6">
         <h2>Your Recipes</h2>
-        <h5>Click on image to add ingredients to shopping list!</h5>
         <!--  <button class="my-rec-button" onclick="clear">Add to My Recipies</button> -->
         <ul id="ingredients-list">
 
         </ul>
 
       </div>
-      <div class="recipe col-3">
+      <div class="recipe col-4">
         <h2>Your Shopping List</h2>
         <p id="total">Total:</p>
         <button class="clear_list btn btn-warning" onclick=clearShoppingList()>clear list</button>
-        <ol id="shopping-list" align="justify">
-        </ol>
+        <div id="shopping-list" align="justify">
+        </div>
       </div>
 
     </div>
@@ -79,12 +79,20 @@
       <div class="col-md-10">
         <div class="card">
           <a href="">
-            <img src="" alt="great image">
+            <img src="" width="50%" alt="great image">
           </a>
-          <div class="description"></div>
-          <button class="list_remove btn btn-warning" onclick="">remove from list</button>
+          <div class="description">
+            <p></p>
+            <button class="list_add btn btn-success">add to list</button>
+            <button class="list_remove btn btn-warning" onclick="">remove from liked</button>
+          </div>
+
         </div>
       </div>
+    </template>
+
+    <template id = "quant_link">
+        <a class="quant row"><i class="material-icons" value=""></i></a>
     </template>
 
 </body>
