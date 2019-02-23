@@ -32,6 +32,12 @@ i.material-icons{
 
 td{
 	font-size:80%;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.quant_link{
+	margin-top:0px;
 }
 
 .list_add{
