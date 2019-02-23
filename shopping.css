@@ -32,7 +32,6 @@ td{
 	margin-bottom:10px;
 	margin-top:10px;
 }
-<<<<<<< HEAD
 
 .quant_link{
 	margin-top:0px;
@@ -45,20 +44,6 @@ td{
 	margin-bottom: 10px;
 }
 
-=======
-
-.quant_link{
-	margin-top:0px;
-}
-/*List add styling*/
-.list_add{
-	display:inline-block;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 10px;
-}
-
->>>>>>> 2626a04295891d977ce685f6861ec3e0ee5fd46f
 .list_remove{
 	display:inline-block;
 	margin-right: auto;
