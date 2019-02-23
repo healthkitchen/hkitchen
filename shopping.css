@@ -30,6 +30,9 @@ i.material-icons{
 	font-size:20px;
 }
 
+td{
+	font-size:80%;
+}
 
 .list_add{
 	display:inline-block;
