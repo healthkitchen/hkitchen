@@ -1,4 +1,4 @@
-
+var undo_buffer = {};
 
 function loadShoppingList() {
 
@@ -74,11 +74,12 @@ function loadShoppingList() {
 
 
 };
-
+//mutators for shopping list
 function addToShoppingList(idx) {
     console.log("adding to shopping list " + idx);
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
+    var temp = JSON.parse(JSON.stringify(SL));
 
     //adds unique recipes to shopping list
     let recipe = recipes[idx];
@@ -95,7 +96,9 @@ function addToShoppingList(idx) {
         }
     }
 
-
+    if(JSON.stringify(SL) != JSON.stringify(temp)){
+        undo_buffer = temp;
+    }
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 
@@ -105,6 +108,8 @@ function addToShoppingList(idx) {
 function upQuant(category,item){
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
+    undo_buffer = JSON.parse(JSON.stringify(SL));
+
     SL[category][item][2] += 1;
     
     localStorage.setItem("SL", JSON.stringify(SL));
@@ -114,33 +119,54 @@ function upQuant(category,item){
 function downQuant(category,item){
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
+    var temp = JSON.parse(JSON.stringify(SL));
+
     SL[category][item][2] -= 1;
     if(SL[category][item][2] <= 0){
         SL[category][item][2] = 1;
     }
-    
+
+    if(JSON.stringify(SL) != JSON.stringify(temp)){
+        undo_buffer = temp;
+    }
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
 
 function removeFromShoppingList(category,item) {
     console.log("removing shopping " + category + " " + item);
-    var retrievedSL = localStorage.getItem("SL") || '{}'
+    var retrievedSL = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrievedSL);
+    undo_buffer = JSON.parse(JSON.stringify(SL));
 
     delete SL[category][item];
     if(jQuery.isEmptyObject(SL[category])){
         delete SL[category];
     }
+    
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
 
 function clearShoppingList() {
+    var temp = JSON.parse(localStorage.getItem("SL") || '{}');
+    if(jQuery.isEmptyObject(temp)){
+        return;
+    }
+    undo_buffer = JSON.parse(localStorage.getItem("SL") || '{}');
     localStorage.removeItem("SL", null);
     loadShoppingList();
 }
 
+function undoShoppingList(){
+    var retrievedSL = localStorage.getItem("SL") || '{}';
+    var SL = JSON.parse(retrievedSL);
+    var temp = SL;
+    localStorage.setItem("SL",JSON.stringify(undo_buffer));
+    undo_buffer = temp;
+    loadShoppingList();
+}
+//mutators for recipe list
 function clearMyRecipes() {
     localStorage.removeItem("MR", null);
     loadShoppingList();
