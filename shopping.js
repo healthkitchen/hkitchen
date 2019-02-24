@@ -25,7 +25,7 @@ function loadShoppingList() {
 
 function renderMyRecipes(){
     console.log("Rendering My Recipes");
-    var retrievedmyrecipes = localStorage.getItem("MR") || '{}'
+    var retrievedmyrecipes = localStorage.getItem("MR") || '[]'
     var myrecipes = JSON.parse(retrievedmyrecipes);
 
     //iterate and render my recipes
@@ -59,6 +59,11 @@ function renderShopping(){
     var retrieved_shoppinglist = localStorage.getItem("SL") || '{}';
     var myshoppinglist = JSON.parse(retrieved_shoppinglist);
 
+    if(jQuery.isEmptyObject(myshoppinglist)){
+        var node = document.createElement("h5");
+        node.textContent = "Add ingredients from recipes you like!";
+        document.getElementById("shopping-list").appendChild(node); 
+    }
     var total = 0;
     for (let category in myshoppinglist) {
         //console.log(category);
