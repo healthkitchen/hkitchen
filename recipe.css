@@ -33,7 +33,7 @@
   border-color: #EFF0F1;
   margin-bottom: auto;
 
-  box-shadow:         1px 1px 0px 0px #ccc;
+  box-shadow: 1px 1px 10px -2px #999;
   border-radius: 5px;
 
   font-weight: bold;
@@ -50,7 +50,7 @@
   margin-bottom: auto;
 
 
-  box-shadow:         1px 1px 0px 0px #ccc;
+  box-shadow: 1px 1px 10px -2px #999;
   border-radius: 5px;
 
 
@@ -79,8 +79,8 @@
   left: 16px;
   margin-bottom: 40px;
   font-weight: bold;
-  font-size: 150%;
-  color: #139E8C;
+  font-size: 120%;
+  /*color: #139E8C;*/
 }
 
 #recipe-name

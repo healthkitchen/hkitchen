@@ -28,7 +28,7 @@ const recipes = [
     {
         retailprice: 10.00,
         homeprice: 8.00,
-        name: "Mark Bittman's Chicken Cutlets with Quick Pan Sauce",
+        name: "Mark Bittman's Chicken Cutlets",
         imgsrc: "images/ChickenCutletswithPanSauce.jpg",
         ingredients: [
             ["1 cup all-purpose flour", "Flour"],

@@ -9,19 +9,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
 
-<!--on load, call init from mainscript.js-->
-<body onload=init_index()>
-    <template id="cardtemplate">
-        <div class ="col-md-4">
-          <div class="card">
-            <a href="recipe.html">
-              <img src="" alt="great image">
-            </a>
-            <div class="description"></div>
-          </div>
-        </div>
-      </template>
-
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><b>Health's Kitchen</b></a>
@@ -48,14 +35,8 @@
   <!--Greeting-->
   <div class="greeting">
     <h1>
-      Here's to your Health
+      Stores Near You
     </h1>
-  <form class="form-group">
-    <input class="search-cards form-control col-xs-4" type="search" placeholder="Name">
-    <input class="search-price form-control col-xs-4" type="search" placeholder="Price">
-    <input class="search-time form-control col-xs-4" type="search" placeholder="Time">
-    <button class="btn btn-success" type="button" onclick="search()">Search</button>
-  </form>
   </div>
   <!-- Page content -->
   <div class="content">
@@ -63,6 +44,47 @@
 
     <div class="cards container-fluid">
       <div class="row">
+        <div class ="col-md-4">
+          <div class="card">
+            <!-- <a href="recipe.html"> -->
+              <img src="images/Jewel.jpg" alt="Jewel Osco">
+            <!-- </a> -->
+            <div class="description"><b>Jewel Osco</b><br />1128 Chicago Ave, Evanston</div>
+          </div>
+        </div>
+
+
+        <div class ="col-md-4">
+          <div class="card">
+            <!-- <a href="recipe.html"> -->
+              <img src="images/Aldi.jpg" alt="Aldi">
+            <!-- </a> -->
+            <div class="description"><b>Aldi</b><br />1128 Chicago Ave, Evanston</div>
+          </div>
+        </div>
+
+
+
+        <div class ="col-md-4">
+          <div class="card">
+            <!-- <a href="recipe.html"> -->
+              <img src="images/tj.jpg" alt="Trader Joe's">
+            <!-- </a> -->
+            <div class="description"><b>trader Joes</b><br />1128 Chicago Ave, Evanston</div>
+          </div>
+        </div>
+
+
+
+
+        <div class ="col-md-4">
+          <div class="card">
+            <!-- <a href="recipe.html"> -->
+              <img src="images/wf.jpg" alt="Whole Foods">
+            <!-- </a> -->
+            <div class="description"><b>Whole Foods</b><br />1128 Chicago Ave, Evanston</div>
+          </div>
+        </div>
 
       </div>
     </div>

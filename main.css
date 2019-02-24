@@ -1,5 +1,7 @@
 body {
-    background-color:#FAFAFA;
+    position: relative;
+    top: 85px;
+    background-color:#EEE;
     font-family: "Arial", Georgia, Serif;
 
     /* enable if navbar is fixed
@@ -35,34 +37,46 @@ body {
     margin:30px;
   }
 
+  .navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: 1px 1px 10px -2px #999;
+    z-index: 999;
+  }
 
   .navbar-light .navbar-brand {
-    color:white;
+    color:#139E8C;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
   }
 
 .navbar-light .navbar-nav .active>.nav-link {
-    color: white;
+    color: #139E8C;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+    color: #139E8C;
 }
 
   .bg-light{
-    background-color:#139E8C !important;
+    background-color:#FAFAFA !important;
   }
   .navbar-custom {
     font-family: "Arial";
     font-size: 14pt;
+
   }
 
   .nav-link{
-      color:white;
+      color:#139E8C;
+
   }
 
   .greeting {
-    margin: 20px;
+
+    margin-left: 50px;
     letter-spacing: 3px;
   }
 
@@ -112,7 +126,6 @@ body {
   	top: 5px;
     /*font-family: "Playfair Display";*/
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: bold;
     font-size: 16px;
     text-align:center;
     color: black;
