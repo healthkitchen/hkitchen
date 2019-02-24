@@ -7,6 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="recipe.css">
 <link rel="stylesheet" href="shopping.css">
@@ -26,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Your Shopping List</a>
+          <a class="nav-link" href="#">Your Recipes and Shopping List</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
@@ -37,55 +38,74 @@
   <!--Content contains name,ingredients, and directions to be loaded in-->
   <div class="content">
 
-    <template id="cardtemplate">
-      <div class="col-md-5">
-        <div class="card2">
-          <a href="recipe.html">
-            <img src="" alt="great image">
-          </a>
-          <div class="description"></div>
-        </div>
-      </div>
-    </template>
-
-    <h1 id="recipe-name"></h1>
     <div class="row">
 
       <div class="ingredients col-6">
         <h2>Your Recipes</h2>
-        <h5>Click on image to add ingredients to shopping list!</h5>
         <!--  <button class="my-rec-button" onclick="clear">Add to My Recipies</button> -->
-        <ul id="ingredients-list">
+        <div class="row" id="ingredients-list">
 
-        </ul>
+        </div>
 
       </div>
-      <div class="recipe col-3">
+      <div class="recipe col-4">
         <h2>Your Shopping List</h2>
         <p id="total">Total:</p>
-        <button class="clear_list btn btn-warning" onclick=clearShoppingList()>clear list</button>
-        <ol id="shopping-list" align="justify">
-        </ol>
-      </div>
-
-    </div>
-    <!--Script files-->
-    <script src="recipe_list.js"></script>
-    <script src="recipe.js"></script>
-    <script src="shopping.js"></script>
-
-    <!--templates go here-->
-    <template id="shopping_cardtemplate">
-      <div class="col-md-10">
-        <div class="card">
-          <a href="">
-            <img src="" alt="great image">
-          </a>
-          <div class="description"></div>
-          <button class="list_remove btn btn-warning" onclick="">remove from list</button>
+        <button class="clear_list btn btn-warning" onclick=clearShoppingList()>Clear List</button>
+        <button title="undo last shopping list action"class="undo btn btn-warning" onclick=undoShoppingList()>
+          Shopping Undo</button>
+        <div id="shopping-list" align="justify">
         </div>
       </div>
-    </template>
+    </div>
+
+  </div>
+  <!--Script files-->
+  <script src="recipe_list.js"></script>
+  <script src="recipe.js"></script>
+  <script src="shopping.js"></script>
+
+  <!--templates go here-->
+  <template id="shopping_cardtemplate">
+    <div class="col-md-6">
+      <div class="card">
+        <a href="">
+          <img src="" width="60%" alt="recipe image">
+        </a>
+        <div class="description">
+          <p></p>
+          <button class="list_add btn-sm btn-success">Add to Shopping List</button>
+          <button class="list_remove btn-sm btn-warning" onclick="">Unlike</button>
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+  <template id="list_item_template">
+    <tr class="row">
+      <td class="item col-md-4"></td>
+      <td class="size col-md-2"></td>
+      <td class="price col-md-2"></td>
+      <td class="quant col-md-1"></td>
+      <td class="quant_link col-md-1">
+        <a class="quant_up row"><i class="material-icons" value="">keyboard_arrow_up</i></a>
+        <a class="quant_down row"><i class="material-icons" value="">keyboard_arrow_down</i></a>
+      </td>
+      <td><a title="remove from shopping list" class="dlt col-md-1">x</a></td>
+    </tr>
+  </template>
+
+  <template id="cardtemplate">
+    <div class="col-md-5">
+      <div class="card2">
+        <a href="recipe.html">
+          <img src="" alt="great image">
+        </a>
+        <div class="description"></div>
+      </div>
+    </div>
+  </template>
 
 </body>
 
