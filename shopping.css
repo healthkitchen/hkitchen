@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-
-/*unordered list styling*/
-ul
-{
-  list-style-type: none;
-}
-/*Recipie Card container for shopping page, used in card template*/
-.col-md-5{
-  margin-top:40px;
-  margin-bottom:40px;
-
-}
-
-/*Recipie Card for shopping page, used in card template*/
-.card2{
-  position: relative;
-
-  width: 250px;
-
-}
-
-.list_remove{
-
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 10px;
-}
-
-#shopping-list
-{
-	padding-top: 20px;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	font-weight: bold;
-}
-=======
 /*unordered list styling*/
 ul
 {
@@ -97,4 +61,3 @@ td{
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	font-weight: bold;
 }
->>>>>>> 74514a6abb5cba816e66f140f87855b198674d01
