@@ -17,7 +17,6 @@ body {
   h1,
   h4,
   h3,
-  h5,
   h6 {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -31,6 +30,12 @@ body {
 
     display: inline-block;
     
+  }
+
+  h5
+  {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 0px 1px 0px 0px #999;
   }
 
   img{
@@ -135,7 +140,6 @@ body {
   	position: relative;
   	padding-bottom: 10px;
   	top: 5px;
-    /*font-family: "Playfair Display";*/
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     text-align:center;
