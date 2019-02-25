@@ -8,29 +8,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="recipe.css">
-<link rel="stylesheet" href="shopping.css">
 <link rel="stylesheet" href="login.css">
 
-
-<form action="action_page.php" method="POST">
+<form action="action_page.php" onsubmit="return validate()">
     <div class="imgcontainer">
         <img src="images/logo.jpg" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="uname" id="username" required>
     </div>
 
     <div class="container" <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
     </div>
 
     <div class="container">
-        <a href="index.html">
-            <button type="submit">Login</button>
-        </a>
+        <button type="submit" onclick=validate()>Login</button>
     </div>
 
     <label class="container">
@@ -41,5 +36,7 @@
         Forgot <a href="#">password?</a>
     </span>
 </form>
+
+<script src="login.js"></script>
 
 </html>
