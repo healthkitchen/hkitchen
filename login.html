@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="login.css">
+
+<form action="action_page.php" onsubmit="return validate()">
+    <div class="imgcontainer">
+        <img src="images/logo.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+    </div>
+
+    <div class="container" <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+    </div>
+
+    <div class="container">
+        <button type="submit" onclick=validate()>Login</button>
+    </div>
+
+    <label class="container">
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+
+    <span class="psw">
+        Forgot <a href="#">password?</a>
+    </span>
+</form>
+
+<script src="login.js"></script>
+
+</html>

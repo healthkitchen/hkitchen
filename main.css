@@ -1,132 +1,125 @@
 body {
-    background-color:#FAFAFA;
-    font-family: "Arial", Georgia, Serif;
-
-    /* enable if navbar is fixed
+  background-color: #FAFAFA;
+  font-family: "Arial", Georgia, Serif;
+  /* enable if navbar is fixed
     padding-top: 60px;
     */
-  }
+}
 
-  footer {
-    text-align: center;
-    font-size: 10px;
-  }
+footer {
+  text-align: center;
+  font-size: 10px;
+}
 
-  h1,
-  h4,
-  h3,
-  h5,
-  h6 {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+h1, h4, h3, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-  }
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: underline;
+}
 
-  h2
-  {
-  	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    text-decoration: underline;
-  }
+img {
+  border-radius: 5px;
+}
 
-  img{
-  	border-radius: 5px;
-  }
+.content {
+  margin: 30px;
+}
 
-  .content{
-    margin:30px;
-  }
-
-
-  .navbar-light .navbar-brand {
-    color:white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 24px;
-  }
+.navbar-light .navbar-brand {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
 
 .navbar-light .navbar-nav .active>.nav-link {
-    color: white;
+  color: white;
 }
+
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+  color: white;
 }
 
-  .bg-light{
-    background-color:#139E8C !important;
-  }
-  .navbar-custom {
-    font-family: "Arial";
-    font-size: 14pt;
-  }
+.bg-light {
+  background-color: #139E8C !important;
+}
 
-  .nav-link{
-      color:white;
-  }
+.navbar-custom {
+  font-family: "Arial";
+  font-size: 14pt;
+}
 
-  .greeting {
-    margin: 20px;
-    letter-spacing: 3px;
-  }
+.nav-link {
+  color: white;
+}
 
-  .col-md-4{
-    margin-top:10px;
-    margin-bottom:10px;
+.greeting {
+  margin: 20px;
+  letter-spacing: 3px;
+}
 
-    /*margin-left:auto;
+.col-md-4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*margin-left:auto;
     margin-right:auto;*/
-  }
+}
 
-  .card{
-    margin-left:3px;
-    margin-right:3px;
-    margin-top:3px;
-    margin-bottom:3px;
-    /*background-color: #CBF3F0;*/
-    border-color: #EFF0F1;
-    border-radius: 5px;
-    transition: all .4s;
-  }
+.card {
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  /*background-color: #CBF3F0;*/
+  border-color: #EFF0F1;
+  border-radius: 5px;
+  transition: all .4s;
+}
 
-  .card:hover{
-    transform: scale(1.03);
-    box-shadow: 3px 3px 20px -3px #bbb;
-    transition: all .1s;
-  }
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 3px 3px 20px -3px #bbb;
+  transition: all .1s;
+}
 
-  .card:active{
-    transform: scale(1.02);
-    box-shadow: 3px 3px 0px -3px #bbb;
-  }
+.card:active {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 0px -3px #bbb;
+}
 
+.content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 
+.description {
+  position: relative;
+  padding-bottom: 10px;
+  top: 5px;
+  /*font-family: "Playfair Display";*/
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+}
 
-  .content img{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:100%;
-    max-height:100%;
-  }
+.search-cards {
+  width: 40%;
+  display: inline-block;
+}
 
-  .description{
-  	position: relative;
-  	padding-bottom: 10px;
-  	top: 5px;
-    /*font-family: "Playfair Display";*/
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    text-align:center;
-    color: black;
-  }
+.search-price {
+  width: 10%;
+  display: inline-block;
+}
 
-  .search-cards{
-    width:40%;
-    display:inline-block;
-  }
-  .search-price{
-    width:10%;
-    display:inline-block;
-  }
-  .search-time{
-    width:10%;
-    display:inline-block;
-  }
+.search-time {
+  width: 10%;
+  display: inline-block;
+}

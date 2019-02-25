@@ -106,7 +106,7 @@ function renderShopping(){
         }
 
     }
-    document.getElementById("total").innerHTML = "Total: $" + Math.round(total * 100) / 100;
+    document.getElementById("total").innerHTML = "Total: $" + (Math.round(total * 100) / 100).toFixed(2);
 }
 //mutators for shopping list
 function addToShoppingList(idx) {
