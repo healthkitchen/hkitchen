@@ -8,7 +8,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
-<body onload="verifyUser()">
+<link rel="stylesheet" href="Stores.css">
+
+<body onload="verifyUser(); initMap();">
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
@@ -40,9 +42,11 @@
     <h1>
       Stores Near You
     </h1>
+    <div id="map"></div>
   </div>
   <!-- Page content -->
   <div class="content">
+    
 
 
     <div class="cards container-fluid">
@@ -115,6 +119,10 @@
   <!--Scripts-->
   <script src=mainscript.js></script>
   <script src="recipe_list.js"></script>
+  <script src="Stores.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa4tXo1z66efDdiP2RBSSKcwvyTr-M2qw">
+  </script>
 
 </body>
 

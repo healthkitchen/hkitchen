@@ -43,11 +43,16 @@
   </nav>
   <!--Content contains name,ingredients, and directions to be loaded in-->
   <div class="content">
+    <div class="row">
+      <h2 class=" col-6">Your Recipes</h2>
+      <h2 class=" col-6">Your Shopping List</h2>
+    </div>
+    
 
     <div class="row">
 
       <div class="ingredients col-6">
-        <h2>Your Recipes</h2>
+        
         <!--  <button class="my-rec-button" onclick="clear">Add to My Recipies</button> -->
         <div class="row" id="ingredients-list">
 
@@ -55,7 +60,7 @@
 
       </div>
       <div class="recipe col-4">
-        <h2>Your Shopping List</h2>
+        
         <p id="total">Total:</p>
         <button class="clear_list btn btn-warning" onclick=clearShoppingList()>Clear List</button>
         <button title="undo last shopping list action"class="undo btn btn-warning" onclick=undoShoppingList()>
@@ -77,7 +82,7 @@
     <div class="col-md-6">
       <div class="card">
         <a href="">
-          <img src="" width="60%" alt="recipe image">
+          <img src="" width="100%" alt="recipe image">
         </a>
         <div class="description">
           <p></p>
