@@ -1,8 +1,9 @@
 body {
   background-color: #FAFAFA;
   font-family: "Arial", Georgia, Serif;
+  padding-top: 60px;
   /* enable if navbar is fixed
-    padding-top: 60px;
+    
     */
 
   }
