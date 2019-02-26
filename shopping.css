@@ -9,8 +9,8 @@ li{
 }
 
 .ingredients{
-	height:80vh;
-	overflow-y:scroll;
+	min-height: 60vh;
+	height:auto;
 }
 /*Recipie Card container for shopping page, used in card template*/
 .col-md-5{
