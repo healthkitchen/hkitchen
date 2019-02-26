@@ -4,6 +4,8 @@ function loadShoppingList() {
 
     console.log("Initializing Shopping List page");
 
+    verifyUser();
+
     //first clear out old recipe list and re-render
     var node = document.getElementById("ingredients-list");
     while (node.firstChild) {
