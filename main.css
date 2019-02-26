@@ -4,35 +4,67 @@ body {
   /* enable if navbar is fixed
     padding-top: 60px;
     */
-}
 
-footer {
-  text-align: center;
-  font-size: 10px;
-}
+  }
 
-h1, h4, h3, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+  footer {
+    text-align: center;
+    font-size: 10px;
+  }
 
-h2 {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  text-decoration: underline;
-}
+  h1,
+  h4,
+  h3,
+  h6 {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
-img {
-  border-radius: 5px;
-}
+  }
 
-.content {
-  margin: 30px;
-}
+  h2
+  {
+  	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    width: 20%;
 
-.navbar-light .navbar-brand {
-  color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-}
+
+    display: inline-block;
+    
+  }
+
+  h5
+  {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 0px 1px 0px 0px #999;
+  }
+
+  img{
+  	border-radius: 5px;
+  }
+
+  button
+  {
+  box-shadow: 1px 1px 10px -2px #999;
+
+  }
+
+  .content{
+    margin:30px;
+  }
+
+  .navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: 1px 1px 10px -2px #999;
+    z-index: 999;
+  }
+
+  .navbar-light .navbar-brand {
+    color:#139E8C;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+  }
 
 .navbar-light .navbar-nav .active>.nav-link {
   color: white;
