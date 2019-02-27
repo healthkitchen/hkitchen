@@ -8,10 +8,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="Stores.css">
 
+<body onload="verifyUser(); initMap();">
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><b>Health's Kitchen</b></a>
+    <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="shopping.html#0,3,4,5">My Recipes & Shopping List</a>
+          <a class="nav-link" href="shopping.html">My Recipes & Shopping List</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Stores.html">Stores Near Me</a>
@@ -29,6 +31,9 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
+      <div class="nav-item">
+        <a class="nav-link" href="javascript:logout()">Logout</a>
+      </div>
     </div>
   </nav>
 
@@ -37,9 +42,11 @@
     <h1>
       Stores Near You
     </h1>
+    <div id="map"></div>
   </div>
   <!-- Page content -->
   <div class="content">
+    
 
 
     <div class="cards container-fluid">
@@ -112,6 +119,10 @@
   <!--Scripts-->
   <script src=mainscript.js></script>
   <script src="recipe_list.js"></script>
+  <script src="Stores.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa4tXo1z66efDdiP2RBSSKcwvyTr-M2qw">
+  </script>
 
 </body>
 
