@@ -1,6 +1,8 @@
 #map {
+  margin-left: 25px;
   height: 400px;  /* The height is 400 pixels */
   width: 96%;  /* The width is the width of the web page */
+
  }
 
 .col-md-4{
