@@ -4,6 +4,8 @@ var time_query;
 function init_index(){
     console.log("Initializing index page");
 
+    verifyUser();
+
     //clear out elements in content div and re-render
     var node = document.querySelector('.row');
     while (node && node.firstChild) {
@@ -23,12 +25,28 @@ function init_index(){
     }
 
     t.content.querySelector('img').src = r.imgsrc;
-    t.content.querySelector('.description').innerHTML = "<b>" + r.name + "</b><br /><font color='green'>$" +r.homeprice + "</font> Cook Time: " + r.time;
+    t.content.querySelector('.description').innerHTML = "<b>" + r.name 
+    + "</b><br /><font color='green'>$" +r.homeprice 
+    + "</font> Cook for: " + r.time
+    + ", " + r.yield;
     t.content.querySelector('a').href = "recipe.html#" + i;
 
     var clone = document.importNode(t.content,true);
     document.querySelector(".cards > .row").appendChild(clone);
     }
+}
+
+function verifyUser(){
+    console.log("verifying user " + sessionStorage.getItem("name"));
+    if(!sessionStorage.getItem("name")){
+        window.location="login.html";
+    }
+}
+
+function logout(){
+    sessionStorage.clear();
+    localStorage.clear();
+    window.location="login.html";
 }
 
 function search(){

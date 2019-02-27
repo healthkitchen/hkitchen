@@ -22,7 +22,7 @@ const recipes = [
         ],
 
         time: "12 minutes",
-        yield: "serves 4 to 6"
+        yield: "Serves 4 to 6"
     },
 
     {
@@ -51,7 +51,7 @@ const recipes = [
             "Remove the chicken from the oven, and if any juices have accumulated on the platter, add them to the skillet along with the  1/4 cup parsley. Stir, taste the sauce, and adjust the seasoning. Spoon the sauce over the chicken, garnish with the remaining 2 tablespoons parsley, and serve with the lemon quarters."
         ],
         time: "20-30 minutes",
-        yield: "4 servings"
+        yield: "Serves 4"
     },
 
     {
@@ -78,7 +78,7 @@ const recipes = [
             "To serve, toss lettuce with a few tablespoons of dressing, adding more if desired. Once lettuce is coated, add half of remaining cheese and three-quarters of croutons and toss again. Transfer to a salad bowl and sprinkle with remaining cheese and croutons. Serve.",
         ],
         time: "20 minutes",
-        yield: "serves 4"
+        yield: "Serves 4"
     },
     {
         retailprice: 5.00,
@@ -100,7 +100,7 @@ const recipes = [
             "While fava beans are broiling, prepare the seasoning salt. In a spice grinder, blend together kosher salt, dill, garlic powder, and onion powder until fine. Sprinkle some of the salt over the pods, reserving the rest for dipping beans as you peel and eat.",
         ],
         time: "15 minutes",
-        yield: "serves 2",
+        yield: "Serves 2",
     },
     {
         retailprice: 7.50,
@@ -126,7 +126,7 @@ const recipes = [
             "Combine toasted bread, tomatoes, and dressing in a large bowl. Add basil leaves. Toss everything to coat and season with salt and pepper. Let rest for 30 minutes before serving, tossing occasionally until dressing is completely absorbed by bread.",
         ],
         time: "30 minutes",
-        yield: "6 servings"
+        yield: "Serves 6"
     },
     {
         retailprice: 6.00,
@@ -149,7 +149,7 @@ const recipes = [
             "Break bacon slices in half and layer them onto the sandwich in 2 layers of 3 half slices each, alternating the orientation of bacon in each layer for more structural stability. Close sandwich and cut in half diagonally. Serve immediately.",
         ],
         time: "20 minutes",
-        yield: "serves 1"
+        yield: "Serves 1"
     },
 
     {
@@ -168,7 +168,7 @@ const recipes = [
             "Immediately add evaporated milk and bring to a boil. Add cheese. Reduce heat to low and cook, stirring continuously, until cheese is melted and liquid has reduced to a creamy sauce, about 2 minutes longer. Season to taste with more salt and serve immediately.",
         ],
         time: "8 minutes",
-        yield: "serves 2"
+        yield: "Serves 2"
     },
 
     {
@@ -192,7 +192,7 @@ const recipes = [
             "To Serve Cold: Transfer salmon to refrigerator uncovered and allow it to chill completely. Store in a sealed container for up to a few days and serve cold in sandwiches or salads, stirred into pasta, or on top of rice bowls.",
             "To Sear: Heat vegetable oil in a cast iron, carbon steel, or nonstick skillet over medium-high heat until shimmering. Carefully add salmon skin side down and cook, pressing gently on fillets with the back of a flexible fish spatula to help maintain pan contact, until skin is browned and crisp, 1 to 1 1/2 minutes. Carefully flip and cook for an additional 15 seconds. Transfer to paper towels to blot off excess oil, then serve immediately.",
         ],
-        time: "15 min",
+        time: "15 minutes",
         yield: "Serves 4"
     },
 
@@ -221,7 +221,7 @@ const recipes = [
             "Add frozen peas and continue to toss and stir until peas are thawed and every grain of rice is separate. Serve immediately.",
         ],
         time:"10 minutes",
-        yield:"serves 3"
+        yield:"Serves 3"
     },
 
 

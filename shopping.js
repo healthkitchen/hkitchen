@@ -4,6 +4,8 @@ function loadShoppingList() {
 
     console.log("Initializing Shopping List page");
 
+    verifyUser();
+
     //first clear out old recipe list and re-render
     var node = document.getElementById("ingredients-list");
     while (node.firstChild) {
@@ -93,7 +95,7 @@ function renderShopping(){
             var t = document.querySelector("#list_item_template");
             t.content.querySelector(".item").textContent = item;
             t.content.querySelector(".size").textContent = myshoppinglist[category][item][1];
-            t.content.querySelector(".price").textContent = myshoppinglist[category][item][0];
+            t.content.querySelector(".price").textContent = "$" + myshoppinglist[category][item][0];
             t.content.querySelector(".quant").textContent = myshoppinglist[category][item][2];
             t.content.querySelector(".quant_up").href = "javascript:upQuant(\""+category + "\",\"" + item +"\")";;
             t.content.querySelector(".quant_down").href = "javascript:downQuant(\""+category + "\",\"" + item +"\")";

@@ -2,6 +2,7 @@
 function loadRecipe(){
     //get the recipe you need
     console.log(window.location.href);
+    verifyUser();
     var index = parseURI();
     //index = recipes.length -1;
     var recipe = recipes[index];
@@ -13,7 +14,9 @@ function loadRecipe(){
     document.getElementById("current_image").src = recipe.imgsrc;
     document.getElementById("recipe-name").innerHTML=recipe.name;
     document.getElementById("prices").innerHTML="Home Price: <font color='green'>$" + homepricestring
-     + "</font><br />Retail: <font color='red'>$" + retailpricestring + "</font><br />Cook Time: " + recipe.time;
+     + "</font><br />Retail: <font color='red'>$" + retailpricestring 
+     + "</font><br />Cook Time: " + recipe.time
+     +"<br />" + recipe.yield;
 
     for(var i of recipe.ingredients){
         //console.log(i);
