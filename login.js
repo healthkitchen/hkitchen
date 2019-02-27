@@ -1,6 +1,12 @@
 var credentials = window.localStorage;
-credentials.setItem('username', 'abcd');
-credentials.setItem('password', 'abcd');
+
+function register() {
+    var username = document.getElementById("uname");
+    var password = document.getElementById("psw");
+
+    credentials.setItem('username', username);
+    credentials.setItem('password', password);
+}
 
 function validate(){
     var username = document.getElementById("username");
