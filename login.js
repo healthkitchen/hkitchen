@@ -2,6 +2,22 @@
 //credentials.setItem('username', 'abcd');
 //credentials.setItem('password', 'abcd');
 
+function register(){
+    var username = document.getElementById("uname").value;
+    var password = document.getElementById("psw").value;
+
+    var profile = {
+        firstname: username,
+        password: password,
+        MR:"",
+        SL:""
+    }
+
+    profiles.push({
+        username:profile
+    })
+}
+
 function validate(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -36,12 +52,6 @@ function validate(){
         localStorage.setItem("SL",profile.SL);
         window.location="index.html";
     }
-
-    /*
-    if (username.value == correctU && password.value == correctP) {
-        window.location = "index.html";
-        return false;
-    }*/
 }
 
 $('.name_field').keyup(function(e) {
