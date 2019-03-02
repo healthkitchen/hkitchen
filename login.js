@@ -3,23 +3,30 @@
 //credentials.setItem('password', 'abcd');
 
 function register() {
+    var firstname = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
     var username = document.getElementById("uname").value;
     var password = document.getElementById("psw").value;
+    var repeat = document.getElementById("psw-repeat").value;
+
+    if (password != repeat) {
+        $(".alert-warning").hide();
+        $(".alert-danger").text('Passwords do not match!');
+        $(".alert-danger").show();
+    }
 
     var profile = {
-        firstname: username,
+        emailAddress: email,
+        firstname: firstname,
         password: password,
         MR: "",
-        SL: ""
+        SL: "",
     }
 
     profiles.push({
         username: profile
     })
-    
-    sessionStorage.setItem("name", profile.firstname);
-    localStorage.setItem("MR", profile.MR);
-    localStorage.setItem("SL", profile.SL);
+
     window.location = "index.html";
 }
 
