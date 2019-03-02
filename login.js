@@ -2,32 +2,35 @@
 //credentials.setItem('username', 'abcd');
 //credentials.setItem('password', 'abcd');
 
+function cancel() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("uname").value = "";
+    document.getElementById("psw").value = "";
+    document.getElementById("psw-repeat").value = "";
+}
+
 function register() {
-    var firstname = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var username = document.getElementById("uname").value;
-    var password = document.getElementById("psw").value;
+    var userFirstName = document.getElementById("name").value;
+    var userEmail = document.getElementById("email").value;
+    var userUsername = document.getElementById("uname").value;
+    var userPassword = document.getElementById("psw").value;
     var repeat = document.getElementById("psw-repeat").value;
 
     if (password != repeat) {
         $(".alert-warning").hide();
         $(".alert-danger").text('Passwords do not match!');
         $(".alert-danger").show();
+    } else {
+        profiles[userUsername] = {
+            firstname: userFirstName,
+            password: userPassword,
+            MR: "",
+            SL: "",
+        }
+
+        window.location = "index.html";
     }
-
-    var profile = {
-        emailAddress: email,
-        firstname: firstname,
-        password: password,
-        MR: "",
-        SL: "",
-    }
-
-    profiles.push({
-        username: profile
-    })
-
-    window.location = "index.html";
 }
 
 function validate() {
