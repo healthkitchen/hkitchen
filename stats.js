@@ -143,6 +143,8 @@ function init_graphs() {
     var ctx_bar = document.getElementById('barcanvas').getContext('2d');
     window.myLine = new Chart(ctx, config_line);
     window.myBar = new Chart(ctx_bar,config_bar);
+
+    renderShopping();
 };
 window.onload = init_graphs();
 /*

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Statistics</title>
+    <title>Finalized Shopping List</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -10,7 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="recipe.css">
     <link rel="stylesheet" href="stats.css">
+
 </head>
 
 <body>
@@ -38,18 +41,36 @@
             </div>
         </div>
     </nav>
-    <h1 id="greeting">You're doing great!</h1>
+    <div id="greeting">
+        <h1>Take one last look at your shopping list!</h1>
+        <p>Let us email it to you!</p>
+        <button class="btn btn-success" type="button" onclick="email()">Send</button>
+    </div>
     <div class="row">
-        <div class="col-md-6 canvas_container" id="linegraph">
-            <h5>Here's how much you've spent on our recipes.</h5>
-            <canvas id="linecanvas"></canvas>
+        <div class="recipe col-md-5">
+            <p id="total"></p>
+            <div id="shopping-list" align="justify">
+            </div>
         </div>
+        <div class="stats col-md-5">
+            <h1>
+                Thanks for using our app!
+            </h1>
 
-        <div class="col-md-6 canvas_container" id="barchart">
-            <h5>Look at how much you've saved!</h5>
-            <canvas id="barcanvas"></canvas>
+
+            <div class="canvas_container" id="linegraph">
+                <h5>Here's how much you've spent on our recipes over the past few weeks.</h5>
+                <canvas id="linecanvas"></canvas>
+            </div>
+
+            <div class="canvas_container" id="barchart">
+                <h5>Look at how much you've saved!</h5>
+                <canvas id="barcanvas"></canvas>
+            </div>
         </div>
     </div>
+
+
     <br>
     <br>
     <!-- <button id="randomizeData">Randomize Data</button>
@@ -57,7 +78,17 @@
     <button id="removeDataset">Remove Dataset</button>
     <button id="addData">Add Data</button>
     <button id="removeData">Remove Data</button> -->
+
+    <template id="list_item_template">
+        <tr class="row">
+            <td class="item col-md-4"></td>
+            <td class="size col-md-3"></td>
+            <td class="price col-md-3"></td>
+            <td class="quant col-md-2"></td>
+        </tr>
+    </template>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="shopping.js"></script>
     <script src="stats.js"></script>
     <script src="mainscript.js"></script>
 </body>
