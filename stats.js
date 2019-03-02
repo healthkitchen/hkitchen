@@ -1,4 +1,4 @@
-window.randomScalingFactor = function () {
+function randomScalingFactor() {
     return Math.abs((Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100));
 };
 window.chartColors = {
@@ -10,13 +10,30 @@ window.chartColors = {
     Orange: 'rgb(255, 159, 64)'
 };
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-var config = {
+var config_line = {
     type: 'bar',
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17', 'Mar 24', 'Mar 31', 'Apr 7'],
         datasets: [{
-            label: 'My First dataset',
-            backgroundColor: chartColors.Red,
+            label: 'Total Value of Your Cooked Meals',
+            backgroundColor: chartColors.Blue,
+            borderColor: chartColors.Blue,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ],
+            fill: false,
+            type: "line",
+        },
+        {
+            label: 'Total Value of Same Meals Retail',
+            fill: '-1',
+            backgroundColor: chartColors.Yellow,
             borderColor: chartColors.Red,
             data: [
                 randomScalingFactor(),
@@ -27,30 +44,16 @@ var config = {
                 randomScalingFactor(),
                 randomScalingFactor()
             ],
-            fill: false,
             type:"line",
-        }, {
-            label: 'My Second dataset',
-            fill: false,
-            backgroundColor: "rgb(54, 162, 235)",
-            borderColor: "rgb(54, 162, 235)",
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-            
-        }]
+
+        },
+        ]
     },
     options: {
         responsive: true,
         title: {
             display: true,
-            text: 'Chart.js Line Chart'
+            text: 'Total Spent'
         },
         tooltips: {
             mode: 'index',
@@ -65,25 +68,85 @@ var config = {
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Month'
+                    labelString: 'Week'
                 }
             }],
             yAxes: [{
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Value'
+                    labelString: 'Money'
                 }
             }]
         }
     }
 };
 
-window.onload = function () {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    window.myLine = new Chart(ctx, config);
+var config_bar = {
+    type: 'bar',
+    data: {
+        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17', 'Mar 24', 'Mar 31', 'Apr 7'],
+        datasets: [
+        {
+            label: 'Accumulated Savings',
+            fill: false,
+            backgroundColor: chartColors.Green,
+            borderColor: chartColors.Green,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ],
+
+        },
+        ]
+    },
+    options: {
+        responsive: true,
+        title: {
+            display: true,
+            text: 'Total Saved'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Week'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Money'
+                }
+            }]
+        }
+    }
 };
 
+function init_graphs() {
+    var ctx = document.getElementById('linecanvas').getContext('2d');
+    var ctx_bar = document.getElementById('barcanvas').getContext('2d');
+    window.myLine = new Chart(ctx, config_line);
+    window.myBar = new Chart(ctx_bar,config_bar);
+};
+window.onload = init_graphs();
+/*
+//reference code for how to do certain things to the graph
 document.getElementById('randomizeData').addEventListener('click', function () {
     config.data.datasets.forEach(function (dataset) {
         dataset.data = dataset.data.map(function () {
@@ -129,4 +192,4 @@ document.getElementById('removeData').addEventListener('click', function () {
         dataset.data.pop();
     });
     window.myLine.update();
-});
+});*/

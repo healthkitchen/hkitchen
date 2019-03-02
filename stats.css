@@ -4,3 +4,11 @@ canvas {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+.canvas_container{
+    display:inline-block;
+    padding-left:20px;
+}
+#greeting{
+    margin:20px;
+}
