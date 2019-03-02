@@ -141,6 +141,13 @@ var config_bar = {
 function init_graphs() {
     var ctx = document.getElementById('linecanvas').getContext('2d');
     var ctx_bar = document.getElementById('barcanvas').getContext('2d');
+    config_line.data.datasets[0].data=JSON.parse(localStorage.save1);
+    config_line.data.datasets[1].data=JSON.parse(localStorage.save2);
+    var money_diff = [];
+    for(let i = 0; i < localStorage.save1.length;i++){
+        money_diff[i] = config_line.data.datasets[1].data[i] - config_line.data.datasets[0].data[i];
+    }
+    config_bar.data.datasets[0].data = money_diff;
     window.myLine = new Chart(ctx, config_line);
     window.myBar = new Chart(ctx_bar,config_bar);
 
