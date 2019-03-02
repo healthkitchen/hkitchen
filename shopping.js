@@ -65,7 +65,7 @@ function renderShopping() {
         var node = document.createElement("h5");
         node.textContent = "Add ingredients from recipes you like!";
         if (document.title == "Finalized Shopping List") {
-            node.textContent = "Add ingredients from recipes you like in the My Recipes & Shopping List page!";
+            node.textContent = "Add ingredients from recipes you like in the Shopping List Builder page!";
         }
         document.getElementById("shopping-list").appendChild(node);
     }
