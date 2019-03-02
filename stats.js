@@ -147,6 +147,15 @@ function init_graphs() {
     renderShopping();
 };
 window.onload = init_graphs();
+
+function send(){
+    document.querySelector(".alert").textContent = "Email has been sent!";
+}
+$(document).ready(function(){
+    $('button').click(function(){
+        $('.alert').show()
+    }) 
+});
 /*
 //reference code for how to do certain things to the graph
 document.getElementById('randomizeData').addEventListener('click', function () {
