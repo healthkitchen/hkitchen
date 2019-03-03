@@ -1,0 +1,36 @@
+/*Style canvas*/
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.canvas_container{
+    display:block;
+    padding-left:20px;
+}
+
+
+.recipe{
+    margin-bottom:40px;
+}
+
+.stats{
+    margin-left:50px;
+}
+
+/*override main and shopping css*/
+.col-md-5{
+    margin-top:0px;
+}
+
+#greeting{
+    margin:20px;
+    margin-top:50px;
+}
+
+img{
+    margin-left:100px;
+    width:200px;
+    display:block;
+}
