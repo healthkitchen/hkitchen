@@ -17,7 +17,28 @@ function register() {
     var userPassword = document.getElementById("psw").value;
     var repeat = document.getElementById("psw-repeat").value;
 
-    if (password != repeat) {
+    if (!userUsername) {
+        $(".alert-danger").hide();
+        $(".alert-warning").text("Please enter your username.");
+        $(".alert-warning").show();
+    } else if (!userPassword) {
+        $(".alert-danger").hide();
+        $(".alert-warning").text("Please enter your password.");
+        $(".alert-warning").show();
+    } else if (!profiles[userUsername]) {
+        console.log('\"' + userUsername + '" not recognized. Remember usernames are case sensitive.');
+        $(".alert-warning").hide();
+        $(".alert-danger").text('\"' + userUsername + '" not a recognized username');
+        $(".alert-danger").show();
+    } else if (profiles[userUsername]["password"] != userPassword) {
+        $(".alert-warning").hide();
+        $(".alert-danger").text('Password incorrect.');
+        $(".alert-danger").show();
+    } else if (userPassword != repeat) {
+        $(".alert-warning").hide();
+        $(".alert-danger").text('Passwords do not match!');
+        $(".alert-danger").show();
+    } else if (userPassword != repeat) {
         $(".alert-warning").hide();
         $(".alert-danger").text('Passwords do not match!');
         $(".alert-danger").show();
