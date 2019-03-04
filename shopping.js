@@ -14,7 +14,7 @@ function loadShoppingList() {
     while (node.firstChild) {
         node.removeChild(node.firstChild);
     }
-    
+
     renderMyRecipes();
     renderShopping();
 
@@ -23,7 +23,7 @@ function loadShoppingList() {
 
 };
 
-function renderMyRecipes(){
+function renderMyRecipes() {
     console.log("Rendering My Recipes");
     var retrievedmyrecipes = localStorage.getItem("MR") || '[]'
     var myrecipes = JSON.parse(retrievedmyrecipes);
@@ -42,10 +42,10 @@ function renderMyRecipes(){
             var t = document.querySelector("#shopping_cardtemplate");
             t.content.querySelector('img').src = dat.imgsrc;
             t.content.querySelector('p').textContent = dat.name;
-            t.content.querySelector('a').href = "recipe.html#"+recipe_idx;
+            t.content.querySelector('a').href = "recipe.html#" + recipe_idx;
 
             var clone = document.importNode(t.content, true);
-            clone.querySelector(".list_add").onclick = function(){addToShoppingList(recipe_idx)};
+            clone.querySelector(".list_add").onclick = function () { addToShoppingList(recipe_idx) };
             clone.querySelector(".list_remove").onclick = function () { removeFromMyRecipes(i) };
 
             document.getElementById("ingredients-list").appendChild(clone);
@@ -53,29 +53,32 @@ function renderMyRecipes(){
     }
 }
 
-function renderShopping(){
+function renderShopping() {
     //iterate and render shopping list
     console.log("Rendering Shopping List");
     var retrieved_shoppinglist = localStorage.getItem("SL") || '{}';
     var myshoppinglist = JSON.parse(retrieved_shoppinglist);
 
-    if(jQuery.isEmptyObject(myshoppinglist)){
+    if (jQuery.isEmptyObject(myshoppinglist)) {
         var node = document.createElement("h5");
         node.textContent = "Add ingredients from recipes you like!";
-        document.getElementById("shopping-list").appendChild(node); 
+        if (document.title == "Finalized Shopping List") {
+            node.textContent = "Add ingredients from recipes you like in the Shopping List Builder page!";
+        }
+        document.getElementById("shopping-list").appendChild(node);
     }
     var total = 0;
     for (let category in myshoppinglist) {
         //console.log(category);
         //console.log(myshoppinglist[category]);
-        if(category == "recipes"){
+        if (category == "recipes") {
             //console.log("loading recipes in shopping list");
             var node = document.createElement("h5");
             node.textContent = "Recipes";
             var lst = document.createElement("ol");
             document.getElementById("shopping-list").append(node);
             var lst_item;
-            for(let r of myshoppinglist["recipes"]){
+            for (let r of myshoppinglist["recipes"]) {
                 //console.log(r);
                 lst_item = document.createElement("li");
                 lst_item.innerHTML = r;
@@ -88,18 +91,20 @@ function renderShopping(){
         var node = document.createElement("h5");
         node.textContent = category;
         document.getElementById("shopping-list").append(node);
-        for(let item in myshoppinglist[category]){
+        for (let item in myshoppinglist[category]) {
 
             var t = document.querySelector("#list_item_template");
             t.content.querySelector(".item").textContent = item;
             t.content.querySelector(".size").textContent = myshoppinglist[category][item][1];
             t.content.querySelector(".price").textContent = myshoppinglist[category][item][0];
             t.content.querySelector(".quant").textContent = myshoppinglist[category][item][2];
-            t.content.querySelector(".quant_up").href = "javascript:upQuant(\""+category + "\",\"" + item +"\")";;
-            t.content.querySelector(".quant_down").href = "javascript:downQuant(\""+category + "\",\"" + item +"\")";
-            t.content.querySelector(".dlt").href = "javascript:removeFromShoppingList(\""+category + "\",\"" + item +"\")";
-
-            var cln = document.importNode(t.content,true);
+            
+            if (document.title != "Finalized Shopping List") {
+                t.content.querySelector(".quant_up").href = "javascript:upQuant(\"" + category + "\",\"" + item + "\")";;
+                t.content.querySelector(".quant_down").href = "javascript:downQuant(\"" + category + "\",\"" + item + "\")";
+                t.content.querySelector(".dlt").href = "javascript:removeFromShoppingList(\"" + category + "\",\"" + item + "\")";
+            }
+            var cln = document.importNode(t.content, true);
             document.getElementById("shopping-list").append(cln);
 
             total += myshoppinglist[category][item][0] * myshoppinglist[category][item][2];
@@ -118,26 +123,26 @@ function addToShoppingList(idx) {
     //adds unique recipes to shopping list
 
     let recipe = recipes[idx];
-    if(!("recipes" in SL)){
+    if (!("recipes" in SL)) {
         SL["recipes"] = [];
     }
-    if(SL["recipes"].indexOf(recipe.name) == -1){
+    if (SL["recipes"].indexOf(recipe.name) == -1) {
         SL["recipes"].push(recipe.name);
     }
     for (let d of recipe.ingredients) {
         var name = d[1];
         var ingredient_info = ingredients[name];
         var category = ingredient_info[2];
-        if(!(category in SL)){
+        if (!(category in SL)) {
             SL[category] = {};
         }
-        if(!(name in SL[category])){
-            SL[category][name] = ingredient_info.slice(0,2);
+        if (!(name in SL[category])) {
+            SL[category][name] = ingredient_info.slice(0, 2);
             SL[category][name][2] = 1;
         }
     }
 
-    if(JSON.stringify(SL) != JSON.stringify(temp)){
+    if (JSON.stringify(SL) != JSON.stringify(temp)) {
         undo_buffer = temp;
     }
     localStorage.setItem("SL", JSON.stringify(SL));
@@ -146,52 +151,52 @@ function addToShoppingList(idx) {
 }
 
 
-function upQuant(category,item){
+function upQuant(category, item) {
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
     undo_buffer = JSON.parse(JSON.stringify(SL));
 
     SL[category][item][2] += 1;
-    
+
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
 
-function downQuant(category,item){
+function downQuant(category, item) {
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
     var temp = JSON.parse(JSON.stringify(SL));
 
     SL[category][item][2] -= 1;
-    if(SL[category][item][2] <= 0){
+    if (SL[category][item][2] <= 0) {
         SL[category][item][2] = 1;
     }
 
-    if(JSON.stringify(SL) != JSON.stringify(temp)){
+    if (JSON.stringify(SL) != JSON.stringify(temp)) {
         undo_buffer = temp;
     }
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
 
-function removeFromShoppingList(category,item) {
+function removeFromShoppingList(category, item) {
     console.log("removing shopping " + category + " " + item);
     var retrievedSL = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrievedSL);
     undo_buffer = JSON.parse(JSON.stringify(SL));
 
     delete SL[category][item];
-    if(jQuery.isEmptyObject(SL[category])){
+    if (jQuery.isEmptyObject(SL[category])) {
         delete SL[category];
     }
-    
+
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
 
 function clearShoppingList() {
     var temp = JSON.parse(localStorage.getItem("SL") || '{}');
-    if(jQuery.isEmptyObject(temp)){
+    if (jQuery.isEmptyObject(temp)) {
         return;
     }
     undo_buffer = JSON.parse(localStorage.getItem("SL") || '{}');
@@ -199,11 +204,11 @@ function clearShoppingList() {
     loadShoppingList();
 }
 
-function undoShoppingList(){
+function undoShoppingList() {
     var retrievedSL = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrievedSL);
     var temp = SL;
-    localStorage.setItem("SL",JSON.stringify(undo_buffer));
+    localStorage.setItem("SL", JSON.stringify(undo_buffer));
     undo_buffer = temp;
     loadShoppingList();
 }

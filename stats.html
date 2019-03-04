@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Finalized Shopping List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="stylesheet" href="stats.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="shopping.html">Shopping List Builder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Stores.html">Stores Near Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stats.html">Finalized Shopping List</a>
+                </li>
+            </ul>
+            <div class="nav-item">
+                <a class="nav-link" href="javascript:logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        "Email has been sent!"
+    </div>
+    
+    <div id="greeting">
+        <h1>Take one last look at your shopping list!</h1>
+        <p>Let us email it to you!</p>
+        <button class="btn btn-success" type="button" onclick="send()">Send</button>
+    </div>
+    <div class="row">
+        <div class="recipe col-md-5">
+            <p id="total"></p>
+            <div id="shopping-list" align="justify">
+            </div>
+        </div>
+        <div class="stats col-md-5">
+            <h1>
+                Thanks for using our app!
+            </h1>
+
+
+            <div class="canvas_container" id="linegraph">
+                <h5>Here's how much you've spent on our recipes over the past few weeks.</h5>
+                <canvas id="linecanvas"></canvas>
+            </div>
+
+            <div class="canvas_container" id="barchart">
+                <h5>Look at how much you've saved!</h5>
+                <canvas id="barcanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <!-- <button id="randomizeData">Randomize Data</button>
+    <button id="addDataset">Add Dataset</button>
+    <button id="removeDataset">Remove Dataset</button>
+    <button id="addData">Add Data</button>
+    <button id="removeData">Remove Data</button> -->
+
+    <template id="list_item_template">
+        <tr class="row">
+            <td class="item col-md-4"></td>
+            <td class="size col-md-3"></td>
+            <td class="price col-md-3"></td>
+            <td class="quant col-md-2"></td>
+        </tr>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="shopping.js"></script>
+    <script src="stats.js"></script>
+    <script src="mainscript.js"></script>
+</body>
+
+</html>
