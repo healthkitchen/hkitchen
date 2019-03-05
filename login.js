@@ -11,41 +11,33 @@ function cancel() {
 }
 
 function register() {
-    var userFirstName = document.getElementById("name").value;
-    var userEmail = document.getElementById("email").value;
-    var userUsername = document.getElementById("uname").value;
-    var userPassword = document.getElementById("psw").value;
+    var uFirstName = document.getElementById("name").value;
+    var uEmail = document.getElementById("email").value;
+    var uUsername = document.getElementById("uname").value;
+    var uPassword = document.getElementById("psw").value;
     var repeat = document.getElementById("psw-repeat").value;
 
-    if (!userUsername) {
+    if (!uUsername) {
         $(".alert-danger").hide();
         $(".alert-warning").text("Please enter your username.");
         $(".alert-warning").show();
-    } else if (!userPassword) {
+    } else if (!uPassword) {
         $(".alert-danger").hide();
         $(".alert-warning").text("Please enter your password.");
         $(".alert-warning").show();
-    } else if (!profiles[userUsername]) {
-        console.log('\"' + userUsername + '" not recognized. Remember usernames are case sensitive.');
+    } else if (profiles[uUsername]) {
+        console.log('\"' + uUsername + '" is already taken. Please enter a different unsername.');
         $(".alert-warning").hide();
-        $(".alert-danger").text('\"' + userUsername + '" not a recognized username');
+        $(".alert-danger").text('\"' + uUsername + '" is already taken');
         $(".alert-danger").show();
-    } else if (profiles[userUsername]["password"] != userPassword) {
-        $(".alert-warning").hide();
-        $(".alert-danger").text('Password incorrect.');
-        $(".alert-danger").show();
-    } else if (userPassword != repeat) {
-        $(".alert-warning").hide();
-        $(".alert-danger").text('Passwords do not match!');
-        $(".alert-danger").show();
-    } else if (userPassword != repeat) {
+    } else if (uPassword != repeat) {
         $(".alert-warning").hide();
         $(".alert-danger").text('Passwords do not match!');
         $(".alert-danger").show();
     } else {
-        profiles[userUsername] = {
-            firstname: userFirstName,
-            password: userPassword,
+        profiles[uUsername] = {
+            firstname: uFirstName,
+            password: uPassword,
             MR: "",
             SL: "",
         }
