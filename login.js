@@ -65,15 +65,15 @@ var profiles = {
         password: "ramsay1",
         MR:"[7,1,2]",
         SL:"{\"recipes\":[\"Mark Bittman's Chicken Cutlets\",\"Sous Vide Salmon\"],\"Pantry\":{\"Flour\":[3.49,\"2 lb\",1],\"Black Pepper\":[2.99,\"3 oz\",1],\"Olive Oil\":[5.89,\"24 oz\",1],\"Butter\":[3.69,\"1 lb\",1],\"White Wine\":[2.18,\"13 oz\",1],\"Vegetable Oil\":[2.89,\"16 oz\",1]},\"Meats\":{\"Chicken\":[4.49,\"3 lb\",1],\"Chicken Stock\":[2.99,\"32 oz\",1],\"Salmon\":[15.4,\"1 lb\",1]},\"Produce\":{\"Parsley\":[2.49,\"2 oz\",1],\"Lemon\":[1.49,\"1 unit\",1],\"Dill\":[1.49,\".5 oz\",1]}}",
-        save1:"[40,65,65,90]",
-        save2:"[60,89,89,120]",
+        save1:"[100,240,390,450]",
+        save2:"[120,320,490,600]",
     },
     "JAverage":{
         firstname:"Joe",
         password:"average2",
         MR:"[0,6,8]",
         SL:"{\"recipes\":[\"Mac and Cheese\",\"Easy Fried Rice\"],\"Pasta\":{\"Macaroni\":[1.49,\"24 oz\",1]},\"Pantry\":{\"Salt\":[0.89,\"26 oz\",1],\"Rice\":[0.99,\"1 lb\",1],\"Vegetable Oil\":[2.89,\"16 oz\",1],\"Soy Sauce\":[2.29,\"1.25 qt\",1],\"Sesame Oil\":[7.49,\"8.45 oz\",1]},\"Dairy\":{\"Milk\":[1.69,\"1 gal\",1],\"Cheese\":[2.79,\"24 oz\",1]},\"Produce\":{\"Onion\":[1,\"1 unit\",1],\"Carrot\":[1.5,\"1lb\",1],\"Scallions\":[1.89,\"6 oz\",1],\"Garlic\":[1.39,\"4 cloves\",1]},\"Meats\":{\"Egg\":[1.69,\"1 dozen\",1]},\"Frozen\":{\"Frozen Peas\":[0.99,\"1 lb\",1]}}",
-        save1:"[20,40,60,80]",
-        save2:"[35,65,95,115]",
+        save1:"[120,270,400,560]",
+        save2:"[160,390,570,690]",
     }
 };
