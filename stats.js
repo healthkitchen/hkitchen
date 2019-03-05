@@ -13,7 +13,7 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 var config_line = {
     type: 'bar',
     data: {
-        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17', 'Mar 24', 'Mar 31', 'Apr 7'],
+        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17'],
         datasets: [{
             label: 'Total Value of Your Cooked Meals',
             backgroundColor: chartColors.Blue,
@@ -85,7 +85,7 @@ var config_line = {
 var config_bar = {
     type: 'bar',
     data: {
-        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17', 'Mar 24', 'Mar 31', 'Apr 7'],
+        labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17',],
         datasets: [
         {
             label: 'Accumulated Savings',
@@ -129,6 +129,9 @@ var config_bar = {
             }],
             yAxes: [{
                 display: true,
+                ticks: {
+                    beginAtZero:true
+                },
                 scaleLabel: {
                     display: true,
                     labelString: 'Money'

@@ -33,7 +33,7 @@
           <a class="nav-link" href="Stores.html">Stores Near Me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="stats.html">Finalized Shopping List</a>
+            <a class="nav-link" href="stats.html">Budget</a>
         </li>
       </ul>
       <div class="nav-item">
@@ -46,6 +46,7 @@
     <div class="row">
       <h2 class=" col-6">Your Recipes</h2>
       <h2 class=" col-6">Your Shopping List</h2>
+      
     </div>
     
 
@@ -64,7 +65,9 @@
         <p id="total">Total:</p>
         <button class="clear_list btn btn-warning" onclick=clearShoppingList()>Clear List</button>
         <button title="undo last shopping list action"class="undo btn btn-warning" onclick=undoShoppingList()>
-          Shopping Undo</button>
+          Shopping Undo
+        </button>
+        <button class="btn btn-success" onclick="window.location.href = 'stats.html';">Finalize</button>
         <div id="shopping-list" align="justify">
         </div>
       </div>
