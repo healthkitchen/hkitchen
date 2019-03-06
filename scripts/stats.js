@@ -23,9 +23,6 @@ var config_line = {
                 randomScalingFactor(),
                 randomScalingFactor(),
                 randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
             ],
             fill: false,
             type: "line",
@@ -40,9 +37,6 @@ var config_line = {
                 randomScalingFactor(),
                 randomScalingFactor(),
                 randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
             ],
             type:"line",
 
@@ -97,9 +91,6 @@ var config_bar = {
                 randomScalingFactor(),
                 randomScalingFactor(),
                 randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
             ],
 
         },
