@@ -31,6 +31,19 @@ function init_index(){
     }
 }
 
+function verifyUser(){
+    console.log("verifying user " + sessionStorage.getItem("name"));
+    if(!sessionStorage.getItem("name")){
+        window.location="login.html";
+    }
+}
+
+function logout(){
+    sessionStorage.clear();
+    localStorage.clear();
+    window.location="login.html";
+}
+
 function search(){
     name_query = document.querySelector(".search-cards").value;
     price_query = parseFloat(document.querySelector(".search-price").value)||Infinity;
