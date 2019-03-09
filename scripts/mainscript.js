@@ -4,6 +4,8 @@ var time_query;
 function init_index(){
     console.log("Initializing index page");
 
+    verifyUser();
+
     //clear out elements in content div and re-render
     var node = document.querySelector('.row');
     while (node && node.firstChild) {
