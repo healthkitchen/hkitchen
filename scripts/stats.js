@@ -15,9 +15,9 @@ var config_line = {
     data: {
         labels: ['Feb 24', 'Mar 3', 'Mar 10', 'Mar 17'],
         datasets: [{
-            label: 'Total Value of Your Cooked Meals',
-            backgroundColor: chartColors.Blue,
-            borderColor: chartColors.Blue,
+            label: 'Cost from Cooking at Home',
+            backgroundColor: chartColors.Green,
+            borderColor: chartColors.Green,
             data: [
                 randomScalingFactor(),
                 randomScalingFactor(),
@@ -25,12 +25,12 @@ var config_line = {
                 randomScalingFactor(),
             ],
             fill: false,
-            type: "line",
+            //type: "line",
         },
         {
-            label: 'Total Value of Same Meals Retail',
-            fill: '-1',
-            backgroundColor: chartColors.Yellow,
+            label: 'Cost If You Ate Out Instead',
+            fill: false,
+            backgroundColor: chartColors.Red,
             borderColor: chartColors.Red,
             data: [
                 randomScalingFactor(),
@@ -38,7 +38,7 @@ var config_line = {
                 randomScalingFactor(),
                 randomScalingFactor(),
             ],
-            type:"line",
+            //type:"line",
 
         },
         ]
@@ -47,6 +47,7 @@ var config_line = {
         responsive: true,
         title: {
             display: true,
+            fontSize: 16,
             text: 'Total Spent'
         },
         tooltips: {
@@ -67,9 +68,12 @@ var config_line = {
             }],
             yAxes: [{
                 display: true,
+                ticks: {
+                    beginAtZero:true
+                },
                 scaleLabel: {
                     display: true,
-                    labelString: 'Money'
+                    labelString: 'Money $'
                 }
             }]
         }
@@ -84,8 +88,8 @@ var config_bar = {
         {
             label: 'Accumulated Savings',
             fill: false,
-            backgroundColor: chartColors.Green,
-            borderColor: chartColors.Green,
+            backgroundColor: "rgb(34, 214, 103)",
+            borderColor: "rgb(34, 214, 103)",
             data: [
                 randomScalingFactor(),
                 randomScalingFactor(),
@@ -100,6 +104,7 @@ var config_bar = {
         responsive: true,
         title: {
             display: true,
+            fontSize: 16,
             text: 'Total Saved'
         },
         tooltips: {
@@ -125,7 +130,7 @@ var config_bar = {
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: 'Money'
+                    labelString: 'Money $'
                 }
             }]
         }
