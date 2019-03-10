@@ -13,13 +13,17 @@ footer {
   font-size: 10px;
 }
 
-h1, h4, h3, h5, h6 {
+h1, h4, h3, h6 {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 h2 {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  text-decoration: underline;
+}
+
+h5{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
 }
 
 img {

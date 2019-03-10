@@ -29,6 +29,17 @@ canvas {
     margin-top:50px;
 }
 
+#email_button{
+  margin-left: 160px;
+}
+
+#total_wrap{
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 img{
     margin-left:100px;
     width:200px;

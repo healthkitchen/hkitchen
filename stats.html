@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="verifyUser();">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -30,10 +30,10 @@
                     <a class="nav-link" href="shopping.html">Shopping List Builder</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Stores.html">Stores Near Me</a>
+                    <a class="nav-link" href="stats.html">Budget</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="stats.html">Budget</a>
+                    <a class="nav-link" href="Stores.html">Stores Near Me</a>
                 </li>
             </ul>
             <div class="nav-item">
@@ -45,20 +45,22 @@
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         "Email has been sent!"
     </div>
-    
+
     <div id="greeting">
         <h1>Take one last look at your shopping list!</h1>
         <p>If you need to make any changes, head to the <a href="shopping.html">shopping list builder</a>.</p>
-        <p>Let us email it to you!</p>
-        <button class="btn btn-success" type="button" onclick="send()">Send</button>
+
     </div>
     <div class="row">
         <div class="recipe col-md-5">
-            <p id="total"></p>
+            <div id="total_wrap" class="row">
+              <p id="total"></p>
+              <button id="email_button" class="btn btn-success" type="button" onclick="send()">Send To Email</button>
+            </div>
             <div id="shopping-list" align="justify">
             </div>
         </div>
-        <div class="stats col-md-5">
+        <div class="stats col-md-4">
             <h1>
                 Thanks for using our app!
             </h1>
