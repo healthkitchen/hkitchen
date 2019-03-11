@@ -16,3 +16,42 @@ function initMap() {
   var marker2 = new google.maps.Marker({position: tj, map: map, label: 'T'});
   var marker3 = new google.maps.Marker({position: jewel, map: map, label: 'J'});
 }
+
+
+var stime_query;
+
+function init_stores(){
+    console.log("Initializing store cards");
+
+    //clear out elements in content div and re-render
+    var node = document.querySelector('.row');
+    while (node && node.firstChild) {
+        node.removeChild(node.firstChild);
+    }
+
+    stime_query = stime_query || Infinity;
+
+    for(var i = 0; i < stores.length; i++){
+      var t = document.querySelector("#scardtemplate");
+      var r = stores[i];
+
+      if(parseFloat(r.time) > stime_query){
+          continue;
+      }
+
+      t.content.querySelector('img').src = r.imgsrc;
+      t.content.querySelector('.description').innerHTML = "<b>" + r.name + "</b><br />" + r.address + "<br />" + r.time + " minute drive";
+      t.content.querySelector('a').href = r.link;
+
+      var clone = document.importNode(t.content,true);
+      document.querySelector(".cards > .row").appendChild(clone);
+      }
+
+}
+
+function ssearch(){
+    stime_query = parseFloat(document.querySelector(".search-time").value)||Infinity;
+
+    console.log(stime_query);
+    init_stores();
+}

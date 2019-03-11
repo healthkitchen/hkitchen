@@ -9,3 +9,14 @@
 	max-width: 25%;
  	height: auto;
 }
+
+#dtime_form{
+  margin-left: 24px;
+  margin-top: 10px;
+  width: 120%;
+}
+
+#store_header{
+  margin-left: 24px;
+
+}
