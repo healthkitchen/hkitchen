@@ -150,7 +150,7 @@ function addToShoppingList(idx) {
 
 }
 
-
+//increase the quantity of items
 function upQuant(category, item) {
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
@@ -161,7 +161,7 @@ function upQuant(category, item) {
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
-
+//decrease number of items you are buying
 function downQuant(category, item) {
     var retrieved_str = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrieved_str);
@@ -178,7 +178,7 @@ function downQuant(category, item) {
     localStorage.setItem("SL", JSON.stringify(SL));
     loadShoppingList();
 }
-
+//remove item from shopping list
 function removeFromShoppingList(category, item) {
     console.log("removing shopping " + category + " " + item);
     var retrievedSL = localStorage.getItem("SL") || '{}';
@@ -203,7 +203,7 @@ function clearShoppingList() {
     localStorage.removeItem("SL", null);
     loadShoppingList();
 }
-
+//functionality for undo
 function undoShoppingList() {
     var retrievedSL = localStorage.getItem("SL") || '{}';
     var SL = JSON.parse(retrievedSL);
