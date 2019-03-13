@@ -10,7 +10,21 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/Stores.css">
 
-<body onload="verifyUser(); initMap();">
+<body onload="verifyUser(); initMap(); init_stores()">
+  <template id="scardtemplate">
+
+    <div class="col-md-4">
+      <div class="card">
+        <a href="" target="_blank">
+          <img src="" alt="Store Image">
+        </a>
+        <div class="description"></div>
+      </div>
+    </div>
+
+  </template>
+
+
   <!-- Navbar (sit on top) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html"><b>Health's Kitchen</b></a>
@@ -39,10 +53,14 @@
 
   <!--Greeting-->
   <div class="greeting">
-    <h1>
+    <h1 id="store_header">
       Stores Near You
     </h1>
     <div id="map"></div>
+    <form id="dtime_form" class="form-group">
+      <input class="search-time form-control col-xs-4" type="search" placeholder="Max Driving Time">
+      <button class="btn btn-success" type="button" onclick="ssearch()">Search</button>
+    </form>
   </div>
   <!-- Page content -->
   <div class="content">
@@ -51,7 +69,7 @@
 
     <div class="cards container-fluid">
       <div class="row">
-
+        <!--
         <div class="col-md-4">
           <div class="card">
             <a href="https://goo.gl/maps/jvMGUCTJo7E2">
@@ -88,8 +106,7 @@
           </div>
         </div>
 
-
-
+        -->
 
             </div>
         </div>
@@ -116,8 +133,9 @@
 
     <!--Scripts-->
     <script src="scripts/mainscript.js"></script>
-    <script src="scripts/recipe_list.js"></script>
+
     <script src="scripts/Stores.js"></script>
+    <script src="scripts/store_list.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa4tXo1z66efDdiP2RBSSKcwvyTr-M2qw">
     </script>
 
