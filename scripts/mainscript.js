@@ -25,7 +25,10 @@ function init_index(){
     }
 
     t.content.querySelector('img').src = r.imgsrc;
-    t.content.querySelector('.description').innerHTML = "<b>" + r.name + "</b><br /><font color='green'>$" +r.homeprice + "</font> Cook Time: " + r.time;
+    t.content.querySelector('.description').innerHTML = "<b>" + r.name 
+    + "</b><br /><font color='green'>$" +r.homeprice 
+    + "</font> Cook for: " + r.time
+    + ", " + r.yield;
     t.content.querySelector('a').href = "recipe.html#" + i;
 
     var clone = document.importNode(t.content,true);
